@@ -1,0 +1,246 @@
+:root {
+  /* Base palette for page backgrounds*/
+  --color-primary: #679aac;
+  --color-secondary: #f8f7e5;
+  --color-tertiary: #1d1d1d;
+
+  /*Palette for boxes backgrunds*/
+  --color-bg-card: #f9af42;
+  --color-bg-hover: #ff834f;
+
+  /* Palette for text colors */
+  --color-txt-primary: #f8f7e5;
+  --color-txt-secondary: #1d1d1d;
+  --color-txt-tertiary: #679aac;
+  --color-txt-quaternary: #f9af42;
+  --color-txt-quinary: #ff834f;
+}
+
+:root {
+  /* Font families */
+  --font-primary: "Quicksand";
+  --font-secondary: "Eczar";
+
+  /* Font weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Responsive font-sizes */
+  --fs-h1: clamp(2.5rem, 1rem + 6vw, 6rem);
+  --fs-h2: clamp(2rem, 0.8rem + 4vw, 4.5rem);
+  --fs-h3: clamp(1.25rem, 0.6rem + 1.5vw, 1.5rem);
+  --fs-body: clamp(1rem, 0.8rem + 0.5vw, 1rem);
+}
+
+@font-face {
+  font-family: "Eczar";
+  src: url("./assets/fonts/eczar-v27-latin-regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eczar";
+  src: url("./assets/fonts/eczar-v27-latin-700.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/quicksand-v37-latin-regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/quicksand-v37-latin-700.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-size: var(--fs-body);
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+}
+
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 40px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header styling */
+header {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.soc-media-icons {
+  height: 32px;
+  width: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 29px;
+  height: 40px;
+}
+
+.logo-txt-white {
+  color: var(--color-txt-primary);
+  font-size: 32px;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-bold);
+}
+
+.lang-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-btn {
+  height: 26px;
+  width: 26px;
+}
+
+.burger-btn {
+  height: 16px;
+  width: 24px;
+}
+
+/* Hero section styling*/
+.section--blue {
+  background-color: var(--color-primary);
+}
+
+.hero-container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.txt-hero {
+    line-height: 100px;
+}
+
+.hero-container-left span {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    color: var(--color-txt-primary);
+}
+
+h1 {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-h1);
+    color: var(--color-txt-primary);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.get-in-touch {
+  width: 150px;
+  border: 1px solid var(--color-txt-primary);
+  border-radius: 100px;
+  padding: 8px 16px;
+  color: var(--color-txt-primary);
+  font-size: 18px;
+}
+
+.get-in-touch:hover {
+    background-color: var(--color-bg-hover);
+}
+
+.scroll-down-img {
+  height: 144px;
+  width: 144px;
+}
+
+.autor-img {
+  height: 700px;
+}
+
+.side-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-container-right {
+    display: flex;
+    align-items: center;
+}

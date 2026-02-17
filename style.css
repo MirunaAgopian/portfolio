@@ -93,9 +93,9 @@ button {
 }
 
 main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .section {
@@ -104,14 +104,16 @@ main {
   align-items: center;
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .section-content {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  height: 100vh;
   box-sizing: border-box;
-  padding: 0 40px;
+  padding: 0 60px;
   border: 1px solid blue;
   display: flex;
   justify-content: space-between;
@@ -143,9 +145,28 @@ nav {
 }
 
 .soc-media-icons {
-  height: 32px;
   width: 32px;
+  height: 32px;
 }
+
+/* Interior shape (changes on hover) */
+.soc-media-icons .fill-shape {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+/* Outline shape (always stays the same) */
+.soc-media-icons .outline {
+  stroke: var(--color-secondary);
+  fill: var(--color-secondary);
+  stroke-width: 0.2;
+}
+
+/* Hover: only interior changes */
+a:hover .soc-media-icons .fill-shape {
+  fill: var(--color-bg-hover);
+}
+
 
 .logo {
   display: flex;
@@ -172,8 +193,8 @@ nav {
 }
 
 .lang-btn {
-  height: 26px;
-  width: 26px;
+  height: 32px;
+  width: 32px;
 }
 
 .burger-btn {
@@ -194,21 +215,21 @@ nav {
 }
 
 .txt-hero {
-    line-height: 100px;
+  line-height: 100px;
 }
 
 .hero-container-left span {
-    font-family: var(--font-primary);
-    font-size: 48px;
-    color: var(--color-txt-primary);
+  font-family: var(--font-primary);
+  font-size: 48px;
+  color: var(--color-txt-primary);
 }
 
 h1 {
-    font-family: var(--font-secondary);
-    font-size: var(--fs-h1);
-    color: var(--color-txt-primary);
-    margin-block-start: 0;
-    margin-block-end: 0;
+  font-family: var(--font-secondary);
+  font-size: var(--fs-h1);
+  color: var(--color-txt-primary);
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .get-in-touch {
@@ -221,7 +242,7 @@ h1 {
 }
 
 .get-in-touch:hover {
-    background-color: var(--color-bg-hover);
+  background-color: var(--color-bg-hover);
 }
 
 .scroll-down-img {
@@ -229,6 +250,10 @@ h1 {
   width: 144px;
 }
 
+.hero-container-center {
+  border: 1px solid white;
+  align-self: flex-end;
+}
 .autor-img {
   height: 700px;
 }
@@ -241,6 +266,16 @@ h1 {
 }
 
 .hero-container-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+/* About me section */
+.section--light {
+  background-color: var(--color-secondary);
+}
+
+/* Skills section */
+.section--dark {
+  background-color: var(--color-tertiary);
 }

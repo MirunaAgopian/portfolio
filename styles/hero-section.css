@@ -1,0 +1,79 @@
+/* Hero section styling*/
+.section--blue {
+  background-color: var(--color-primary);
+}
+
+.hero-container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.txt-hero {
+  line-height: 100px;
+}
+
+.hero-container-left span {
+  font-family: var(--font-primary);
+  font-size: 48px;
+  color: var(--color-txt-primary);
+}
+
+h1 {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-h1);
+  color: var(--color-txt-primary);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.get-in-touch {
+  width: 150px;
+  border: 1px solid var(--color-txt-primary);
+  border-radius: 100px;
+  padding: 8px 16px;
+  color: var(--color-txt-primary);
+  font-size: 18px;
+}
+
+.get-in-touch:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.scroll-down-img {
+  position: relative;
+  height: 144px;
+  width: 144px;
+}
+
+.scroll-down-wheel {
+  animation: rotateWheel 8s linear infinite;
+}
+
+.arrow-down {
+  position: absolute;
+  top: 39%;
+  left: 41%;
+  height: 32px;
+}
+
+.hero-container-center {
+  border: 1px solid white;
+  align-self: flex-end;
+}
+.autor-img {
+  height: 700px;
+}
+
+.side-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-container-right {
+  display: flex;
+  align-items: center;
+}

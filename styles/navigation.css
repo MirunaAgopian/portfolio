@@ -1,0 +1,98 @@
+/* Header styling */
+header {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.soc-media-icons {
+  width: 32px;
+  height: 32px;
+}
+
+.soc-media-icons .fill-shape {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.soc-media-icons .outline {
+  stroke: var(--color-secondary);
+  fill: var(--color-secondary);
+  stroke-width: 0.2;
+}
+
+a:hover .soc-media-icons .fill-shape {
+  fill: var(--color-bg-hover);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 29px;
+  height: 40px;
+}
+
+.logo-txt-white {
+  color: var(--color-txt-primary);
+  font-size: 32px;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-bold);
+}
+
+.lang-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-btn {
+  height: 32px;
+  width: 32px;
+  background-image: url("../assets/img/lang_en_white.png");
+  background-size: cover;
+}
+
+.lang-btn:hover {
+  height: 32px;
+  width: 32px;
+  background-image: url("../assets/img/lang_en_hover.png");
+  background-size: cover;
+}
+
+.lang-btn .outline {
+  stroke: var(--color-secondary);
+  fill: var(--color-secondary);
+  stroke-width: 0.2;
+}
+
+.burger-btn {
+  height: 16px;
+  width: 24px;
+  background-image: url("../assets/img/burger_menu_white.png");
+}
+
+.burger-btn:hover {
+  background-image: url("../assets/img/burger_menu_hover.png");
+}

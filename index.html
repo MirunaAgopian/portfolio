@@ -6,6 +6,9 @@
     <title>Miruna Agopian</title>
     <link rel="icon" href="./assets/img/logo.png" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/navigation.css">
+    <link rel="stylesheet" href="./styles/hero-section.css">
+    <link rel="stylesheet" href="./styles/skills-section.css">
   </head>
   <body>
     <header>
@@ -98,31 +101,12 @@
         <ul class="lang-nav">
           <li>
             <button aria-label="Change language">
-              <svg
-                class="lang-btn"
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="fill-shape" cx="16" cy="16" r="15" />
-                <path
-                  class="outline"
-                  d="
-      M10.376 11.4H16.604C16.856 11.4 17.066 11.484 17.234 11.652C17.414 11.82 17.504 12.03 17.504 12.282C17.504 12.534 17.414 12.738 17.234 12.894C17.066 13.05 16.856 13.128 16.604 13.128H11.168V17.854H15.794C16.046 17.854 16.256 17.938 16.424 18.106C16.604 18.274 16.694 18.49 16.694 18.754C16.694 19.006 16.604 19.21 16.424 19.366C16.256 19.522 16.046 19.6 15.794 19.6H11.222V24.416H16.604C16.856 24.416 17.066 24.506 17.234 24.686C17.414 24.854 17.504 25.052 17.504 25.28C17.504 25.532 17.414 25.742 17.234 25.91C17.066 26.066 16.856 26.144 16.604 26.144H10.376C10.124 26.144 9.908 26.06 9.728 25.892C9.548 25.712 9.458 25.49 9.458 25.226V12.318C9.458 12.054 9.548 11.838 9.728 11.67C9.908 11.49 10.124 11.4 10.376 11.4ZM29.191 11.4C29.431 11.4 29.623 11.484 29.767 11.652C29.923 11.808 30.001 12.006 30.001 12.246V25.082C30.001 25.346 29.911 25.568 29.731 25.748C29.563 25.916 29.347 26 29.083 26C28.963 26 28.831 25.976 28.687 25.928C28.555 25.88 28.453 25.814 28.381 25.73L20.983 16.136V25.172C20.983 25.4 20.905 25.598 20.749 25.766C20.593 25.922 20.395 26 20.155 26C19.903 26 19.699 25.922 19.543 25.766C19.399 25.598 19.327 25.4 19.327 25.172V12.318C19.327 12.042 19.417 11.82 19.597 11.652C19.777 11.484 19.993 11.4 20.245 11.4C20.377 11.4 20.515 11.43 20.659 11.49C20.815 11.538 20.929 11.616 21.001 11.724L28.219 21.12V12.246C28.219 12.006 28.297 11.808 28.453 11.652C28.609 11.484 28.807 11.4 29.047 11.4H29.191Z
-    "
-                />
-              </svg>
+              <div class="lang-btn"></div>
             </button>
           </li>
           <li>
             <button aria-label="Open menu">
-              <img
-                class="burger-btn"
-                src="./assets/img/burger_menu_white.png"
-                alt=""
-              />
+              <div class="burger-btn"></div>
             </button>
           </li>
         </ul>
@@ -137,13 +121,19 @@
               <h1>Miruna Agopian</h1>
               <span>Frontend Developer</span>
             </div>
-
             <button class="get-in-touch">Get in Touch</button>
-            <img
-              class="scroll-down-img"
-              src="./assets/img/scroll_down_hero_btn.png"
-              alt="scroll down image"
-            />
+            <div class="scroll-down-img">
+              <img
+                class="scroll-down-wheel"
+                src="./assets/img/scroll_down_no_arrow.png"
+                alt="orange wheel with text - scroll down"
+              />
+              <img
+                class="arrow-down"
+                src="./assets/img/arrow_down.png"
+                alt="arrow pointing down"
+              />
+            </div>
           </div>
           <div class="hero-container-center">
             <!-- i need to edit the image an place the orange wheel behind it
@@ -187,7 +177,7 @@
         </div>
       </section>
       <section class="section section--dark">
-        <div class="section-content">
+        <div class="section-content-column">
           <div class="skills-container-left">
             <div class="header-and-box">
               <h2>Core Competencies</h2>
@@ -204,6 +194,16 @@
                 </p>
               </div>
             </div>
+            <!-- <div class="wheel-wrapper">
+              <img
+                class="orange-wheel"
+                src="./assets/img/orange_wheel.png"
+                alt="an orange wheel"
+              />
+              <img class="hat" src="./assets/img/toga.png" alt="a black hat" />
+            </div> -->
+          </div>
+          <div class="skills-container-middle">
             <div class="wheel-wrapper">
               <img
                 class="orange-wheel"
@@ -212,59 +212,113 @@
               />
               <img class="hat" src="./assets/img/toga.png" alt="a black hat" />
             </div>
-          </div>
-          <div class="skills-container-middle">
+            <div class="overlay-skills">
+              <button>
+                <img
+                  class="overlay-close-btn"
+                  src="./assets/img/close_btn.png"
+                  alt="close button"
+                />
+              </button>
+              <p>Don't you find the skill you need?</p>
+              <p>
+                I'm currently expanding my knowledge. I have a special interest
+                in learning:
+              </p>
+              <div class="ovelay-skill-icon-container">
+                <img class="overlay-skill-icons" src="./assets/img/python_icon.png" alt="python icon">
+                <img class="overlay-skill-icons" src="./assets/img/django_icon.png" alt="django icon">
+              </div>
+            </div>
             <div class="skills-icons">
-              <img
-                class="icon-skill"
-                src="./assets/img/html_icon.png"
-                alt="html icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/css_icon.png"
-                alt="css icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/js_icon.png"
-                alt="javascript icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/ts_icon.png"
-                alt="typescript icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/angular_icon.png"
-                alt="angular icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/firebase_icon.png"
-                alt="firebase icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/git_icon.png"
-                alt="git icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/rest_api_icon.png"
-                alt="rest api icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/scrum_icon.png"
-                alt="scrum icon"
-              />
-              <img
-                class="icon-skill"
-                src="./assets/img/material_design_icon.png"
-                alt="material design"
-              />
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/html_icon.svg"
+                  alt="html icon"
+                />
+                <span>HTML</span>
+              </div>
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/css_icon.png"
+                  alt="css icon"
+                />
+                <span>CSS</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/js_icon.png"
+                  alt="javascript icon"
+                />
+                <span>JavaScript</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/ts_icon.png"
+                  alt="typescript icon"
+                />
+                <span>TypeScript</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/angular_icon.png"
+                  alt="angular icon"
+                />
+                <span>Angular</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/firebase_icon.png"
+                  alt="firebase icon"
+                />
+                <span>Firebase</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/git_icon.png"
+                  alt="git icon"
+                />
+                <span>Git</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/rest_api_icon.png"
+                  alt="rest api icon"
+                />
+                <span>Rest API</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/scrum_icon.png"
+                  alt="scrum icon"
+                />
+                <span>Scrum</span>
+              </div>
+
+              <div class="skill-icon-txt">
+                <img
+                  class="icon-skill"
+                  src="./assets/img/material_design_icon.png"
+                  alt="material design"
+                />
+                <span>Material design</span>
+              </div>
             </div>
           </div>
           <div class="skills-container-right">

@@ -6,12 +6,16 @@
 .hero-container-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
+  flex-basis: 60%;
+  padding-top: 200px;
+  padding-bottom: 60px;
 }
 
 .txt-hero {
   line-height: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-container-left span {
@@ -59,11 +63,22 @@ h1 {
 }
 
 .hero-container-center {
-  border: 1px solid white;
   align-self: flex-end;
+  position: relative;
+  flex-basis: 30%;
 }
-.autor-img {
-  height: 700px;
+
+.orange-wheel-hero {
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  height: 300px;
+  width: 300px;
+}
+
+.author-img{
+  height: 800px;
+  position: relative;
 }
 
 .side-dots {
@@ -76,4 +91,5 @@ h1 {
 .hero-container-right {
   display: flex;
   align-items: center;
+  padding-left: 40px;
 }

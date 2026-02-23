@@ -1,0 +1,139 @@
+/* About me section */
+.section--light {
+  background-color: var(--color-secondary);
+}
+
+.ab-me-section-content {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+/* First column */
+.left-img-container {
+  align-self: end;
+}
+
+.about-me-img {
+  height: 700px;
+  display: block;
+}
+
+/* Second column */
+.txt-box-container {
+  align-self: center;
+  background-color: var(--color-tertiary);
+  padding: 32px;
+  border-radius: 4px;
+  margin-top: 200px;
+}
+
+.txt-box-container p {
+  color: var(--color-txt-primary);
+  text-align: justify;
+}
+
+.btn-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-txt button {
+  border: 1px solid white;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 100px;
+}
+
+.btn-txt button:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.emoji-img {
+  animation: bounceImg 1s ease-in-out infinite;
+}
+
+@keyframes bounceImg {
+  0% {
+    transform: translateY(4px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+.emoji-img:hover {
+    animation-play-state: paused;
+}
+
+/* Third column */
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2 {
+  color: var(--color-txt-secondary);
+}
+
+.ab-me-overlay {
+  background-color: var(--color-primary);
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 32px;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.ab-me-overlay span,
+li {
+  color: var(--color-txt-primary);
+}
+
+.ab-me-overlay span {
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+}
+
+.ab-me-overlay ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ab-me-overlay li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.check-img {
+  height: 16px;
+  width: 16px;
+}
+
+/* Fourth column */
+
+.right-container {
+  align-self: center;
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/hero-section.css" />
     <link rel="stylesheet" href="./styles/about-me.css" />
     <link rel="stylesheet" href="./styles/skills-section.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header>
@@ -201,12 +202,14 @@
                 class="emoji-img"
                 src="./assets/img/secret_info _emojis.png"
                 alt="a smiley face keeping the pointer finger to the mouth"
+                onmouseenter="showAbMeOverlay(true)"
+                onmouseleave="showAbMeOverlay(false)"
               />
             </div>
           </div>
           <div class="header-container">
             <h2>About me</h2>
-            <div class="ab-me-overlay">
+            <div id="ab_me" class="ab-me-overlay d-none">
               <span>More about me</span>
               <ul>
                 <li>

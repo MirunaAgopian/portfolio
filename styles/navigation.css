@@ -43,6 +43,11 @@ a:hover .soc-media-icons .fill-shape {
   fill: var(--color-bg-hover);
 }
 
+/* added now */
+.menu-btn:hover .fill-shape {
+  fill: var(--color-bg-hover);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -67,32 +72,15 @@ a:hover .soc-media-icons .fill-shape {
   gap: 8px;
 }
 
-.lang-btn {
-  height: 32px;
-  width: 32px;
-  background-image: url("../assets/img/lang_en_white.png");
-  background-size: cover;
+
+.language-btn {
+  color: var(--color-txt-primary);
+  font-size: 14px;
+  border: 1px solid var(--color-txt-primary);
+  border-radius: 50%;
+  padding: 4px;
 }
 
-.lang-btn:hover {
-  height: 32px;
-  width: 32px;
-  background-image: url("../assets/img/lang_en_hover.png");
-  background-size: cover;
-}
-
-.lang-btn .outline {
-  stroke: var(--color-secondary);
-  fill: var(--color-secondary);
-  stroke-width: 0.2;
-}
-
-.burger-btn {
-  height: 16px;
-  width: 24px;
-  background-image: url("../assets/img/burger_menu_white.png");
-}
-
-.burger-btn:hover {
-  background-image: url("../assets/img/burger_menu_hover.png");
+.language-btn:hover {
+  background-color: var(--color-bg-hover);
 }

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/hero-section.css" />
     <link rel="stylesheet" href="./styles/about-me.css" />
     <link rel="stylesheet" href="./styles/skills-section.css" />
+    <link rel="stylesheet" href="./styles/my-work.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -103,7 +104,7 @@
         <ul class="lang-nav">
           <li>
             <button aria-label="Change language">
-               <button class="language-btn">EN</button>
+              <button class="language-btn">EN</button>
             </button>
           </li>
           <li>
@@ -306,7 +307,7 @@
         </div>
       </section>
       <section class="section section--dark">
-        <div class="section-content-column">
+        <div class="skills-section-content">
           <div class="skills-container-left">
             <div class="header-and-box">
               <h2>Core Competencies</h2>
@@ -323,138 +324,117 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="wheel-wrapper">
-              <img
-                class="orange-wheel"
-                src="./assets/img/orange_wheel.png"
-                alt="an orange wheel"
-              />
-              <img class="hat" src="./assets/img/toga.png" alt="a black hat" />
-            </div> -->
-          </div>
-          <div class="skills-container-middle">
-            <div class="wheel-wrapper">
-              <img
-                class="orange-wheel"
-                src="./assets/img/orange_wheel.png"
-                alt="an orange wheel"
-              />
-              <img class="hat" src="./assets/img/toga.png" alt="a black hat" />
-            </div>
-            <div class="overlay-skills">
-              <button>
+            <div class="bottom-container-overlay-skills">
+              <div class="wheel-wrapper">
                 <img
-                  class="overlay-close-btn"
-                  src="./assets/img/close_btn.png"
-                  alt="close button"
-                />
-              </button>
-              <p>Don't you find the skill you need?</p>
-              <p>
-                I'm currently expanding my knowledge. I have a special interest
-                in learning:
-              </p>
-              <div class="ovelay-skill-icon-container">
-                <img
-                  class="overlay-skill-icons"
-                  src="./assets/img/python_icon.png"
-                  alt="python icon"
+                  class="orange-wheel"
+                  src="./assets/img/orange_wheel.png"
+                  alt="an orange wheel"
+                  onmouseenter="showSkillsOverlay(true)"
                 />
                 <img
-                  class="overlay-skill-icons"
-                  src="./assets/img/django_icon.png"
-                  alt="django icon"
+                  class="hat"
+                  src="./assets/img/toga.png"
+                  alt="a black hat"
                 />
+                <div id="overlay_skills" class="overlay-skills d-none">
+                  <button>
+                    <img
+                      class="overlay-close-btn"
+                      src="./assets/img/close_btn.png"
+                      alt="close button"
+                      onclick="showSkillsOverlay(false)"
+                    />
+                  </button>
+                  <p>Don't you find the skill you need?</p>
+                  <p>
+                    I'm currently expanding my knowledge. I have a special
+                    interest in learning:
+                  </p>
+                  <div class="ovelay-skill-icon-container">
+                    <img
+                      class="overlay-skill-icons"
+                      src="./assets/img/python_icon.png"
+                      alt="python icon"
+                    />
+                    <img
+                      class="overlay-skill-icons"
+                      src="./assets/img/django_icon.png"
+                      alt="django icon"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="skills-icons">
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/html_icon.svg"
-                  alt="html icon"
-                />
-                <span>HTML</span>
-              </div>
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/css_icon.png"
-                  alt="css icon"
-                />
-                <span>CSS</span>
-              </div>
+              <div class="skills-icons">
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/html_icon.svg"
+                    alt="html icon"
+                  />
+                  <span>HTML</span>
+                </div>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/css_icon.png"
+                    alt="css icon"
+                  />
+                  <span>CSS</span>
+                </div>
 
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/js_icon.png"
-                  alt="javascript icon"
-                />
-                <span>JavaScript</span>
-              </div>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/js_icon.png"
+                    alt="javascript icon"
+                  />
+                  <span>JavaScript</span>
+                </div>
 
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/ts_icon.png"
-                  alt="typescript icon"
-                />
-                <span>TypeScript</span>
-              </div>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/ts_icon.png"
+                    alt="typescript icon"
+                  />
+                  <span>TypeScript</span>
+                </div>
 
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/angular_icon.png"
-                  alt="angular icon"
-                />
-                <span>Angular</span>
-              </div>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/angular_icon.png"
+                    alt="angular icon"
+                  />
+                  <span>Angular</span>
+                </div>
 
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/firebase_icon.png"
-                  alt="firebase icon"
-                />
-                <span>Firebase</span>
-              </div>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/firebase_icon.png"
+                    alt="firebase icon"
+                  />
+                  <span>Firebase</span>
+                </div>
 
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/git_icon.png"
-                  alt="git icon"
-                />
-                <span>Git</span>
-              </div>
-
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/rest_api_icon.png"
-                  alt="rest api icon"
-                />
-                <span>Rest API</span>
-              </div>
-
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/scrum_icon.png"
-                  alt="scrum icon"
-                />
-                <span>Scrum</span>
-              </div>
-
-              <div class="skill-icon-txt">
-                <img
-                  class="icon-skill"
-                  src="./assets/img/material_design_icon.png"
-                  alt="material design"
-                />
-                <span>Material design</span>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/git_icon.png"
+                    alt="git icon"
+                  />
+                  <span>Git</span>
+                </div>
+                <div class="skill-icon-txt">
+                  <img
+                    class="icon-skill"
+                    src="./assets/img/scrum_icon.png"
+                    alt="scrum icon"
+                  />
+                  <span>Scrum</span>
+                </div>
               </div>
             </div>
           </div>
@@ -485,7 +465,88 @@
           </div>
         </div>
       </section>
-      <section class="section section--light">Portfolio</section>
+      <section class="section section--light">
+        <div class="projects-section-content">
+          <div class="left-container">
+            <div class="header-txt">
+              <h2>My work</h2>
+              <p>
+                Have a look at my projects - Test them to better understand my
+                skills in action.
+              </p>
+            </div>
+            <div class="projects-container">
+              <div class="project-img">
+                <p>
+                  aici imi trebuie pos relative si img. de proj sa fie bagata cu
+                  CSS
+                </p>
+                <!-- Plus roata aia again -->
+                <img src="" alt="" />
+              </div>
+              <div class="project-description">
+                <div class="black-box">
+                  <div class="header-icon">
+                    <h3>Join</h3>
+                    <div class="technologies">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>JS</span>
+                    </div>
+                    <div class="icon-overlay">
+                      <div class="overlay">
+                        <p>Descriere de Proiect - ce am invatat eu din el</p>
+                      </div>
+                      <!-- Imaginea asta e tot dinamica -->
+                      <img src="" alt="" />
+                    </div>
+                  </div>
+                  <div class="txt-btn">
+                    <p>Descriere de Proiect.... tot dinamica</p>
+                    <div class="btns-container">
+                      <button>Github <img src="" alt="" /></button>
+                      <div class="counter">
+                        <p>1</p>
+                        <p>/3</p>
+                      </div>
+                      <button>Live Test <img src="" alt="" /></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="lower-btns">
+                  <span> <img src="" alt="" /> Previous project</span>
+                  <span> Next project <img src="" alt="" /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-container">
+            <ul class="side-dots">
+              <li>
+                <img src="./assets/img/black_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/black_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/black_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/diamond_nav_btn_orange.png"
+                  alt="navigation dots"
+                />
+              </li>
+              <li>
+                <img src="./assets/img/black_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/black_dot.png" alt="navigation dots" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section class="section section--blue">References</section>
       <section class="section section--dark">Contact+footer</section>
     </main>

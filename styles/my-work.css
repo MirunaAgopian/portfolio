@@ -1,0 +1,55 @@
+/* Styling my work section */
+.projects-section-content {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+/* Left container */
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.header-txt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+}
+
+h2 {
+  color: var(--color-txt-secondary);
+}
+
+/* Project image and description */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-img {
+    background-color: var(--color-bg-card);
+    height: 480px;
+    width: 480px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.black-box {
+    background-color: var( --color-tertiary);
+}
+
+.black-box h3 {
+    color: var( --color-txt-primary);
+}

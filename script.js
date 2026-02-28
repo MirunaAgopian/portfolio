@@ -10,13 +10,34 @@ function showAbMeOverlay(show) {
   } else {
     overlay.classList.remove("visible");
     overlay.addEventListener(
-      "transitionend",
-      () => {
+      "transitionend", () => {
         if (!overlay.classList.contains("visible")) {
           overlay.classList.add("d-none");
         }
       },
       { once: true },
+    );
+  }
+}
+
+function showSkillsOverlay(show){
+  const overlay = document.getElementById("overlay_skills");
+  if(show) {
+    overlay.classList.remove("d-none");
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        overlay.classList.add("visible");
+      });
+    });
+  }
+  else {
+    overlay.classList.remove("visible");
+    overlay.addEventListener('transitionend', () => {
+      if(!overlay.classList.contains("visible")) {
+        overlay.classList.add("d-none");
+      }
+    },
+    {once: true},
     );
   }
 }

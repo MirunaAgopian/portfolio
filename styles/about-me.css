@@ -24,7 +24,6 @@
 }
 
 .about-me-img {
-  /* height: 700px; */
   height: clamp(350px, 65vw, 700px);
   display: block;
 }

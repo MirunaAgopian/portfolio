@@ -41,3 +41,12 @@ function showSkillsOverlay(show){
     );
   }
 }
+
+function showProjectsOverlay(show){
+  const overlay = document.getElementById("projects_overlay");
+  if(show){
+    overlay.classList.remove('d-none');
+  } else {
+    overlay.classList.add('d-none');
+  }
+}

@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
   border: 1px solid red;
 }
 
@@ -24,11 +25,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 80px;
+  gap: clamp(32px, 2vw, 80px);
+  margin-bottom: 40px;
 }
 
 .header-txt h2 {
   color: var(--color-txt-secondary);
+  white-space: nowrap;
 }
 
 .header-txt p {
@@ -40,13 +43,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: clamp(16px, 2vw, 40px);
 }
 
 .project-img-container {
   background-color: var(--color-bg-card);
-  height: 480px;
-  width: 480px;
+  /* height: 480px;
+  width: 480px; */
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  min-width: 0;
   border: 1px solid black;
   border-radius: 4px;
   position: relative;
@@ -58,8 +65,13 @@
 }
 
 .project-img {
-  width: 440px;
-  height: 300px;
+  /* width: 440px;
+  height: 300px; */
+  min-width: 300px;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 440 / 300;
+  height: auto;
   z-index: 4;
   border-radius: 4px;
 }
@@ -75,6 +87,7 @@
 
 .project-description {
   flex-grow: 3;
+  min-width: 0;
 }
 
 .black-box {
@@ -82,6 +95,7 @@
   padding: 30px;
   text-align: justify;
   border-radius: 4px;
+  min-width: 0;
 }
 
 .black-box h3,
@@ -99,18 +113,19 @@ button {
 }
 
 .overlay {
-    background-color: var(--color-primary);
-    padding: 32px;
-    border-radius: 4px;
-    border: 2px solid var(--color-secondary);
-    position: absolute;
-    bottom: 80px;
-    right: 0;
-    width: 450px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--color-primary);
+  padding: 32px;
+  border-radius: 4px;
+  border: 2px solid var(--color-secondary);
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 100%;
+  max-width: 450px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-icon {
@@ -120,7 +135,7 @@ button {
 }
 
 .project-icon:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .technologies span {
@@ -165,15 +180,63 @@ button {
 }
 
 .lower-btns span {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .lower-btns span:hover {
-    color: var(--color-txt-quinary);
+  color: var(--color-txt-quinary);
 }
 
 .lower-btns p,
 span {
   color: var(--color-txt-secondary);
   font-weight: var(--fw-bold);
+}
+
+.right-container {
+  min-width: 0;
+}
+
+/* Media queries for PC */
+
+@media(max-width: 1200px) {
+  .overlay {
+    right: 50px;
+    max-width: 250px;
+    height: 280px;
+    top: 0;
+  }
+
+  .header-txt {
+    margin-bottom: 0;
+  }
+
+  .project-img-container {
+    height: 400px;
+  }
+}
+
+@media(max-width: 950px) {
+  .project-description {
+    width: 800px;
+    height: 400px;
+  }
+
+  .overlay {
+    max-width: 180px;
+    min-height: 320px;
+    right: 40px;
+  }
+
+  .project-img {
+    min-width: 250px;
+  }
+
+  .btns-container {
+    gap: 14px;
+  }
+
+  .btns-container a {
+    font-size: 16px;
+  }
 }

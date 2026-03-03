@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/about-me.css" />
     <link rel="stylesheet" href="./styles/skills-section.css" />
     <link rel="stylesheet" href="./styles/my-work.css" />
+    <link rel="stylesheet" href="./styles/feedback-section.css" />
     <!-- Scripts -->
     <script src="./script.js" defer></script>
     <script src="./scripts/db.js" defer></script>
@@ -380,7 +381,7 @@
                 <div class="skill-icon-txt">
                   <img
                     class="icon-skill"
-                    src="./assets/img/html_icon.svg"
+                    src="./assets/img/html_icon.png"
                     alt="html icon"
                   />
                   <span>HTML</span>
@@ -505,9 +506,7 @@
                 <div class="black-box">
                   <div class="header-icon-technologies">
                     <div class="header-icon-overlay">
-                      <!-- Titlul e dinamic -->
                       <h3 id="project_title"></h3>
-                      <!-- Imaginea asta e tot dinamica -->
                       <img
                         id="project_icon"
                         class="project-icon"
@@ -517,12 +516,10 @@
                         onmouseleave="showProjectsOverlay(false)"
                       />
                       <div id="projects_overlay" class="overlay d-none">
-                        <!-- descrierea de aici e dinamica -->
                         <p id="project_overlay_description"></p>
                       </div>
                     </div>
                     <div class="technologies">
-                      <!-- Tehnologiile folosite sunt tot dinamice -->
                       <span id="span1"></span>
                       <span id="span2"></span>
                       <span id="span3"></span>
@@ -530,7 +527,6 @@
                     </div>
                   </div>
                   <div class="txt-btn">
-                    <!-- descriere dinamica -->
                     <p id="black_box_description"></p>
                     <div class="btns-container">
                       <a
@@ -562,11 +558,15 @@
                   </div>
                 </div>
                 <div class="lower-btns">
-                  <span onclick="showPreviousProject()"> &lt;&lt; Previous project</span>
+                  <span onclick="showPreviousProject()">
+                    &lt;&lt; Previous project</span
+                  >
                   <div class="counter">
                     <p></p>
                   </div>
-                  <span onclick="showNextProject()"> Next project &gt;&gt;</span>
+                  <span onclick="showNextProject()">
+                    Next project &gt;&gt;</span
+                  >
                 </div>
               </div>
             </div>
@@ -598,7 +598,73 @@
           </div>
         </div>
       </section>
-      <section class="section section--blue">References</section>
+      <section class="section section--blue">
+        <div class="ref-section-content">
+          <div class="ref-left-container">
+            <h2>What my colleagues say about me</h2>
+            <div class="feedbacks-container">
+              <div class="wrapper-feedback-box1">
+                <div class="feedback-box1">
+                  <div class="name-icon">
+                    <h3>Max Mustermannus</h3>
+                    <div class="hover-img"></div>
+                  </div>
+                  <p>Miruna ist einfach super, bla bla</p>
+                  <span>Name der Perso</span>
+                </div>
+                <a href="#">To Linkedin profile >></a>
+              </div>
+              <div class="wrapper-feedback-box2">
+                <div class="feedback-box2">
+                  <div class="name-icon">
+                    <h3>Max Mustermannus2</h3>
+                    <div class="hover-img"></div>
+                  </div>
+                  <p>Miruna ist einfach super, bla bla</p>
+                  <span>Name der Perso</span>
+                </div>
+                <a href="#">To Linkedin profile >></a>
+              </div>
+              <div class="wrapper-feedback-box3">
+                <div class="feedback-box3">
+                  <div class="name-icon">
+                    <h3>Max Mustermannus3</h3>
+                    <div class="hover-img"></div>
+                  </div>
+                  <p>Miruna ist einfach super, bla bla</p>
+                  <span>Name der Perso</span>
+                </div>
+                <a href="#">To Linkedin profile >></a>
+              </div>
+            </div>
+          </div>
+          <div class="right-container">
+            <ul class="side-dots">
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/diamond_nav_btn_orange.png"
+                  alt="navigation dots"
+                />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section class="section section--dark">Contact+footer</section>
     </main>
   </body>

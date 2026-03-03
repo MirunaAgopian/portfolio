@@ -1,0 +1,106 @@
+.ref-section-content {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+.ref-left-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-txt-primary);
+}
+
+.ref-left-container h2 {
+  align-self: flex-start;
+  color: var(--color-txt-primary);
+}
+
+.ref-left-container span {
+  color: var(--color-txt-primary);
+}
+
+.ref-left-container a {
+  color: var(--color-txt-primary);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+  width: fit-content;
+  font-size: 18px;
+}
+
+.ref-left-container a:hover {
+    color: var(--color-txt-quinary);
+}
+
+.feedbacks-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 500px;
+  column-gap: 20px;
+}
+
+.name-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper-feedback-box1 {
+  align-self: start;
+}
+
+.feedback-box1 {
+  border: 1px solid var(--color-txt-primary);
+  height: 200px;
+  border-radius: 4px;
+  padding: 32px;
+  margin-bottom: 16px;
+}
+
+.hover-img {
+    height: 32px;
+    width: 32px;
+    background-image: url('../assets/img/orange_wheel.png');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback-box1:hover .hover-img,
+.feedback-box2:hover .hover-img,
+.feedback-box3:hover .hover-img {
+    opacity: 1;
+}
+
+.wrapper-feedback-box2 {
+  align-self: center;
+}
+
+.feedback-box2 {
+  border: 1px solid var(--color-txt-primary);
+  height: 200px;
+  border-radius: 4px;
+  padding: 32px;
+  margin-bottom: 16px;
+}
+
+.wrapper-feedback-box3 {
+  align-self: end;
+}
+
+.feedback-box3 {
+  border: 1px solid var(--color-txt-primary);
+  height: 200px;
+  border-radius: 4px;
+  padding: 32px;
+  margin-bottom: 16px;
+}

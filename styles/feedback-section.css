@@ -38,7 +38,7 @@
 }
 
 .ref-left-container a:hover {
-    color: var(--color-txt-quinary);
+  color: var(--color-txt-quinary);
 }
 
 .feedbacks-container {
@@ -49,9 +49,9 @@
 }
 
 .name-icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .wrapper-feedback-box1 {
@@ -60,25 +60,12 @@
 
 .feedback-box1 {
   border: 1px solid var(--color-txt-primary);
-  height: 200px;
+  height: 250px;
   border-radius: 4px;
   padding: 32px;
   margin-bottom: 16px;
-}
-
-.hover-img {
-    height: 32px;
-    width: 32px;
-    background-image: url('../assets/img/orange_wheel.png');
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.feedback-box1:hover .hover-img,
-.feedback-box2:hover .hover-img,
-.feedback-box3:hover .hover-img {
-    opacity: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper-feedback-box2 {
@@ -87,10 +74,12 @@
 
 .feedback-box2 {
   border: 1px solid var(--color-txt-primary);
-  height: 200px;
+  height: 250px;
   border-radius: 4px;
   padding: 32px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper-feedback-box3 {
@@ -99,8 +88,55 @@
 
 .feedback-box3 {
   border: 1px solid var(--color-txt-primary);
-  height: 200px;
+  height: 250px;
   border-radius: 4px;
   padding: 32px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
+
+.feedback-box1 h3,
+.feedback-box2 h3,
+.feedback-box3 h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 18px;
+}
+
+.hover-img {
+  height: 32px;
+  width: 32px;
+  background-image: url("../assets/img/orange_wheel.png");
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-box1:hover .hover-img,
+.feedback-box2:hover .hover-img,
+.feedback-box3:hover .hover-img {
+  opacity: 1;
+}
+
+.feedback-box1 p,
+.feedback-box2 p,
+.feedback-box3 p {
+  overflow-y: scroll;
+  height: 150px;
+  text-align: justify;
+}
+
+.feedback-box1 p::-webkit-scrollbar,
+.feedback-box2 p::-webkit-scrollbar,
+.feedback-box3 p::-webkit-scrollbar {
+  display: none;
+}
+
+/* @media(max-width: 1000px) {
+  .feedback-box1,
+  .feedback-box2, 
+  .feedback-box3 {
+    height: 250px;
+}
+} */

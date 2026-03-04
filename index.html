@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/skills-section.css" />
     <link rel="stylesheet" href="./styles/my-work.css" />
     <link rel="stylesheet" href="./styles/feedback-section.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
     <!-- Scripts -->
     <script src="./script.js" defer></script>
     <script src="./scripts/db.js" defer></script>
@@ -606,13 +607,25 @@
               <div class="wrapper-feedback-box1">
                 <div class="feedback-box1">
                   <div class="name-icon">
-                    <h3>Max Mustermannus</h3>
+                    <h3>Emin Fatih Halici</h3>
                     <div class="hover-img"></div>
                   </div>
-                  <p>Miruna ist einfach super, bla bla</p>
-                  <span>Name der Perso</span>
+                  <p>
+                    Die Zusammenarbeit mit Miruna war eine echte Bereicherung.
+                    Sie kombiniert starke analytische Fähigkeiten mit einer
+                    organisierten Arbeitsweise. Besonders hervorzuheben ist ihr
+                    Verständnis für Software-Architekturen und ihre Fähigkeit,
+                    technische Herausforderungen zielstrebig zu lösen. Dabei ist
+                    sie stets hilfsbereit und kommuniziert auf Augenhöhe - eine
+                    Top-Empfehlung für jedes Team.
+                  </p>
+                  <span>Frontend developer</span>
                 </div>
-                <a href="#">To Linkedin profile >></a>
+                <a
+                  href="https://www.linkedin.com/in/emin-fatih-halici/"
+                  target="_blank"
+                  >To Linkedin profile >></a
+                >
               </div>
               <div class="wrapper-feedback-box2">
                 <div class="feedback-box2">
@@ -665,7 +678,113 @@
           </div>
         </div>
       </section>
-      <section class="section section--dark">Contact+footer</section>
+      <section class="section section--dark">
+        <div class="contact-footer-content">
+          <div class="left-container-contact">
+            <div class="upper-container">
+              <div class="header-subheader">
+                <h2>Let's build something cool together!</h2>
+                <div class="subheader-txt">
+                  <h3>Got a problem to solve?</h3>
+                  <p>
+                    Then I am here to solve it. Just hit me and let work
+                    together. I like new challenges and love working in team.
+                  </p>
+                </div>
+              </div>
+              <div class="contact-form">
+                <form action="/send-message" method="POST">
+                  <div class="upper-form">
+                    <div class="name-container">
+                      <label for="name">What's your name?</label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        placeholder="Your name goes here"
+                      />
+                    </div>
+                    <div class="mail-container">
+                      <label for="email">What's your email?</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        placeholder="youremail@email.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="textarea-container">
+                    <label for="message">How can I help you?</label>
+                    <textarea name="message" id="message" placeholder="Hello Miruna, I am interested in..."></textarea>
+                  </div>
+                  <div class="privacy-policy">
+                    <div class="checkbox"></div>
+                    <p>I've read the <a href="#">privacy policy</a>and agree to the processing of my data.</p>
+                    <span class="error-message"></span>
+                  </div>
+                  <button class="submit-message-btn">Drop a line</button>
+                </form>
+              </div>
+            </div>
+            <div class="lower-container">
+              <div class="images-wrapper">
+                <img
+                  class="orange-wheel-footer"
+                  src="./assets/img/orange_wheel.png"
+                  alt="orange wheel"
+                />
+                <img
+                  class="blue-wheel-footer"
+                  src="./assets/img/blue_wheel.png"
+                  alt="blue wheel"
+                />
+              </div>
+              <footer>
+                <span>&#xA9; Miruna Agopian 2026</span>
+                <div class="socials-contaier">
+                  <a href="#">Impressum</a>
+                  <a
+                    href="https://www.linkedin.com/in/miruna-agopian-824320333/"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                  <a href="https://github.com/MirunaAgopian" target="_blank"
+                    >Github</a
+                  >
+                </div>
+              </footer>
+            </div>
+          </div>
+          <div class="right-container">
+            <ul class="side-dots">
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img src="./assets/img/white_dot.png" alt="navigation dots" />
+              </li>
+              <li>
+                <img
+                  src="./assets/img/diamond_nav_btn_orange.png"
+                  alt="navigation dots"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

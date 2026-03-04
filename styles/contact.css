@@ -1,0 +1,155 @@
+.contact-footer-content {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+.contact-footer-content h2 {
+  color: var(--color-txt-quaternary);
+  line-height: 1.2;
+  margin-top: 150px;
+}
+
+.subheader-txt h3 {
+  color: var(--color-txt-quinary);
+}
+
+.left-container-contact {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upper-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  border: 1px solid blue;
+}
+
+.header-subheader {
+  align-self: flex-start;
+  width: 50%;
+}
+
+/* Form styling */
+.contact-form {
+  border: 1px solid red;
+  align-self: flex-end;
+  width: 50%;
+  color: var(--color-txt-primary);
+  height: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* here I could drop the fixed height and use gaps */
+  height: 100%;
+}
+
+.upper-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  height: 60px;
+}
+
+.name-container {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.mail-container {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer and images */
+
+.lower-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.images-wrapper {
+  position: relative;
+  width: 350px;
+}
+
+.orange-wheel-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 180;
+  height: 180;
+  animation: rotateWheel 8s linear infinite;
+}
+
+.blue-wheel-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 250px;
+  width: 250px;
+  z-index: 2;
+  animation: rotateOtherWay 8s linear infinite;
+}
+
+footer span,
+a {
+  color: var(--color-txt-primary);
+  font-weight: var(--fw-normal);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  width: 50%;
+}
+
+.socials-contaier {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.socials-contaier a {
+  cursor: pointer;
+}
+
+.socials-contaier a:hover {
+  color: var(--color-txt-quinary);
+}
+
+@keyframes rotateOtherWay {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

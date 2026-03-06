@@ -5,7 +5,7 @@ let projectsInfo = [
     projectTitle: "Join",
     projectIcon: "assets/img/join_project_icon.png",
     projectOverlayDescription:
-      "JOIN gave me practical experience with advanced CS, DOM manipulation, and interactive UI behavior. I implemented data handling with Firebase, including dynamic rendering, structured storage, real‑time updates, and form validation. The project pushed my skills and showed me how to build solid, data‑driven frontend features with confidence.",
+      "JOIN gave me practical experience with advanced CSS and DOM manipulation, and interactive UI behavior. I implemented data handling with Firebase, including dynamic rendering, structured storage, real‑time updates, and form validation. The project pushed my skills and showed me how to build solid, data‑driven frontend features with confidence.",
     projectTechnologies: ["HTML |", "CSS |", "JS |", "Firebase"],
     projectBlackBoxDescription:
       "A collaborative Kanban board application built as a team project. It allows users to create tasks, assign them to contacts, prioritize them, and move them across categories using drag‑and‑drop.",

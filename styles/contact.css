@@ -47,6 +47,35 @@
   width: 50%;
   color: var(--color-txt-primary);
   height: 400px;
+  margin-bottom: 100px;
+}
+
+label {
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+  padding-left: 8px;
+}
+
+.mail-container:hover label,
+.name-container:hover label,
+.textarea-container:hover label {
+  color: var(--color-txt-quinary);
+}
+
+input {
+  padding: 16px 8px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-txt-primary);
+  font-size: 16px;
+  border-bottom: 1px solid var(--color-bg-card);
+  cursor: pointer;
+  font-family: "Quicksand";
+}
+
+input::placeholder {
+  color: var(--color-txt-primary);
+  font-family: "Quicksand";
 }
 
 form {
@@ -61,28 +90,86 @@ form {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  height: 60px;
+  padding-bottom: 16px;
 }
 
 .name-container {
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 }
 
 .mail-container {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 }
 
 .textarea-container {
   display: flex;
   flex-direction: column;
+}
+
+textarea {
+  resize: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-bg-card);
+  padding: 16px 8px;
+  color: var(--color-txt-primary);
+  font-family: "Quicksand";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+textarea::placeholder {
+  color: var(--color-txt-primary);
+  font-family: "Quicksand";
+  font-size: 16px;
+}
+
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.privacy-policy a {
+  cursor: pointer;
+  color: var(--color-txt-quinary);
+}
+
+.privacy-policy a:hover {
+  color: var(--color-txt-primary);
+  font-weight: var(--fw-bold);
+}
+
+.checkbox {
+  background-image: url("../assets/img/checkbox_empty.svg");
+  height: 15px;
+  width: 15px;
+}
+
+.checkbox:hover {
+  transform: scale(1.1);
+  background-image: url("../assets/img/checkbox_checked.svg");
+}
+
+.submit-message-btn {
+  width: 150px;
+  border: 1px solid var(--color-txt-primary);
+  border-radius: 100px;
+  padding: 8px 16px;
+  color: var(--color-txt-primary);
+  font-size: 18px;
+  align-self: center;
+}
+
+.submit-message-btn:hover {
+  background-color: var(--color-bg-hover);
 }
 
 /* Footer and images */

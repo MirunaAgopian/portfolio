@@ -102,6 +102,7 @@ h2 {
   font-size: var(--fs-h2);
   font-family: var(--font-secondary);
   color: var(--color-txt-primary);
+  line-height: 1;
 }
 
 button {

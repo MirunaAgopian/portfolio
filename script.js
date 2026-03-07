@@ -97,7 +97,6 @@ function renderProject(project) {
   DOM.projectCounterDom.textContent = `${currentProjectIndex + 1}/${projectsInfo.length}`;
 }
 
-
 function init() {
   renderProject(projectsInfo[currentProjectIndex]);
 }
@@ -117,3 +116,15 @@ function showPreviousProject() {
   }
   renderProject(projectsInfo[currentProjectIndex]);
 }
+
+//creates smooth scroll behaviour to hero for the bouncing arrow 
+//in contact section
+document.querySelector(".go-up-link a").addEventListener("click", function (e) {
+  e.preventDefault();
+  const hero = document.querySelector("#hero");
+  const scroller = document.querySelector("main");
+  scroller.scrollTo({
+    top: hero.offsetTop,
+    behavior: "smooth",
+  });
+});

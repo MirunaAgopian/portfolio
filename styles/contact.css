@@ -184,6 +184,16 @@ textarea::placeholder {
   font-size: 16px;
 }
 
+textarea.error::placeholder {
+  color: #c56969;
+  opacity: 1;
+}
+
+textarea.error {
+  border-bottom: 1px solid #c56969;
+  opacity: 1;
+}
+
 textarea::-webkit-scrollbar {
   width: 4px;
 }
@@ -201,6 +211,7 @@ textarea::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .privacy-policy a {
@@ -213,17 +224,33 @@ textarea::-webkit-scrollbar-thumb {
   font-weight: var(--fw-bold);
 }
 
+.checkbox-and-text {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.checkbox-wrapper {
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+
 .checkbox {
   background-image: url("../assets/img/checkbox_empty.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 15px;
   width: 15px;
-  padding-right: 16px;
+  margin-right: 16px;
+  transition: box-shadow 125ms ease;
 }
 
 .checkbox:hover {
-  transform: scale(1.1);
+  box-shadow: 0 0 25px 4px rgba(249, 175, 66, 0.5);
+}
+
+.checkbox.checked {
   background-image: url("../assets/img/checkbox_checked.svg");
 }
 
@@ -239,6 +266,21 @@ textarea::-webkit-scrollbar-thumb {
 
 .submit-message-btn:hover {
   background-color: var(--color-bg-hover);
+}
+
+.submit-message-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.error-message {
+  height: 20px;
+  width: 90%;
+  color: #c56969;
+  padding: 8px;
+  font-weight: var(--fw-normal);
 }
 
 /* Footer and images */

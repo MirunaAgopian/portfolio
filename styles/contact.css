@@ -110,6 +110,16 @@ input::placeholder {
   font-family: "Quicksand";
 }
 
+input.error::placeholder {
+  color: #c56969;
+  opacity: 1;
+}
+
+input.error {
+  border-bottom: 1px solid #c56969;
+  opacity: 1;
+}
+
 form {
   display: flex;
   flex-direction: column;

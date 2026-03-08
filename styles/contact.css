@@ -50,7 +50,7 @@
 }
 
 .go-up-arrow path {
-  fill: #F8F7E5;
+  fill: #f8f7e5;
 }
 
 .go-up-link {
@@ -118,6 +118,18 @@ input.error::placeholder {
 input.error {
   border-bottom: 1px solid #c56969;
   opacity: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-txt-primary) !important;
+  box-shadow: 0 0 0 1000px var(--color-tertiary) inset !important;
+  border-bottom: 1px solid var(--color-bg-card) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 form {

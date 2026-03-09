@@ -8,6 +8,7 @@
   margin: 0 auto;
   padding: 0 60px;
   box-sizing: border-box;
+  position: relative;
   border: 1px solid blue;
 }
 
@@ -187,10 +188,6 @@ button {
 span {
   color: var(--color-txt-secondary);
   font-weight: var(--fw-bold);
-}
-
-.right-container {
-  min-width: 0;
 }
 
 /* Media queries for PC */

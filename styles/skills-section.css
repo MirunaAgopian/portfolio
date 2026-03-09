@@ -12,6 +12,7 @@
   margin: 0 auto;
   padding: 0 60px;
   box-sizing: border-box;
+  position: relative;
   border: 1px solid blue;
 }
 
@@ -159,6 +160,8 @@
   align-self: center;
   align-items: center;
   grid-column: 4;
+  position: absolute;
+  right: 24px;
 }
 
 /* Media queries for laptops */

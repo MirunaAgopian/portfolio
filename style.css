@@ -127,18 +127,6 @@ main {
   scroll-snap-stop: always;
 }
 
-.section-content {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 0 60px;
-  border: 1px solid blue;
-  display: flex;
-  justify-content: space-between;
-}
-
 
 
 

@@ -160,3 +160,23 @@
   align-items: center;
   grid-column: 4;
 }
+
+/* Media queries for laptops */
+
+@media (min-height: 500px) and (max-height: 800px) and (min-width: 1200px) {
+  .header-and-box h2 {
+    margin-block-end: 16px;
+  }
+
+  .blue-box {
+    height: 150px;
+  }
+
+  .skills-icons {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .overlay-skills {
+    top: -20px;
+  }
+}

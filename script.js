@@ -145,59 +145,71 @@ function handleBlurName() {
   updateSubmitButtonState();
 }
 
+// function handleBlurEmail() {
+//   const emailField = document.getElementById("email");
+//   const emailInputValue = emailField.value.trim();
+//   const atIndex = emailInputValue.indexOf("@");
+//   const dotIndex = emailInputValue.indexOf(".", atIndex + 1);
+//   const localPart = emailInputValue.slice(0, atIndex);
+//   const allowedCharacters =
+//     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-";
+//   let invalidCharacterFound = false;
+//   for (let character of localPart) {
+//     if (!allowedCharacters.includes(character)) {
+//       invalidCharacterFound = true;
+//       break;
+//     }
+//   }
+
+//   const isInvalid =
+//     emailInputValue === "" ||
+//     invalidCharacterFound ||
+//     //No @ found
+//     atIndex === -1 ||
+//     //No . after @
+//     dotIndex === -1 ||
+//     //Dot placement rules
+//     dotIndex < atIndex ||
+//     dotIndex === atIndex + 1 ||
+//     dotIndex === emailInputValue.length - 1 ||
+//     //Domain and top-level-domain rules
+//     dotIndex - atIndex - 1 < 2 ||
+//     emailInputValue.length - dotIndex - 1 < 2 ||
+//     //Double characters
+//     emailInputValue.includes("..") ||
+//     emailInputValue.includes("--") ||
+//     emailInputValue.includes("__") ||
+//     emailInputValue.includes("@@") ||
+//     // End of local part rules
+//     emailInputValue[atIndex - 1] === "." ||
+//     emailInputValue[atIndex - 1] === "-" ||
+//     emailInputValue[atIndex - 1] === "_" ||
+//     // Start of local part rules
+//     localPart[0] === "-" ||
+//     localPart[0] === "_" ||
+//     localPart[0] === "." ||
+//     //ENd of domain rules, no "_" or "-" after domain name
+//     emailInputValue[dotIndex - 1] === "-" ||
+//     emailInputValue[dotIndex - 1] === "_";
+
+//   if (isInvalid) {
+//     emailField.classList.add("error");
+//     emailField.placeholder = "Please enter your email.";
+//   } else {
+//     emailField.classList.remove("error");
+//     emailField.placeholder = "";
+//   }
+
+//   updateSubmitButtonState();
+// }
+
 function handleBlurEmail() {
   const emailField = document.getElementById("email");
-  const emailInputValue = emailField.value.trim();
-  const atIndex = emailInputValue.indexOf("@");
-  const dotIndex = emailInputValue.indexOf(".", atIndex + 1);
-  const localPart = emailInputValue.slice(0, atIndex);
-  const allowedCharacters =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-";
-  let invalidCharacterFound = false;
-  for (let character of localPart) {
-    if (!allowedCharacters.includes(character)) {
-      invalidCharacterFound = true;
-      break;
-    }
-  }
 
-  const isInvalid =
-    emailInputValue === "" ||
-    invalidCharacterFound ||
-    //No @ found
-    atIndex === -1 ||
-    //No . after @
-    dotIndex === -1 ||
-    //Dot placement rules
-    dotIndex < atIndex ||
-    dotIndex === atIndex + 1 ||
-    dotIndex === emailInputValue.length - 1 ||
-    //Domain and top-level-domain rules
-    dotIndex - atIndex - 1 < 2 ||
-    emailInputValue.length - dotIndex - 1 < 2 ||
-    //Double characters
-    emailInputValue.includes("..") ||
-    emailInputValue.includes("--") ||
-    emailInputValue.includes("__") ||
-    emailInputValue.includes("@@") ||
-    // End of local part rules
-    emailInputValue[atIndex - 1] === "." ||
-    emailInputValue[atIndex - 1] === "-" ||
-    emailInputValue[atIndex - 1] === "_" ||
-    // Start of local part rules
-    localPart[0] === "-" ||
-    localPart[0] === "_" ||
-    localPart[0] === "." ||
-    //ENd of domain rules, no "_" or "-" after domain name
-    emailInputValue[dotIndex - 1] === "-" ||
-    emailInputValue[dotIndex - 1] === "_";
-
-  if (isInvalid) {
+  if (!emailField.checkValidity()) {
     emailField.classList.add("error");
-    emailField.placeholder = "Please enter your email.";
   } else {
     emailField.classList.remove("error");
-    emailField.placeholder = "";
   }
 
   updateSubmitButtonState();
@@ -277,3 +289,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //I need to disable false e-mail validation at chrome autofill!!
+//I also need to empty fields when msj was submitted

@@ -19,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   min-width: 0;
-  border: 1px solid red;
 }
 
 .header-txt {

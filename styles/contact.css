@@ -22,7 +22,6 @@
 }
 
 .left-container-contact {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,7 +73,6 @@
 
 /* Form styling */
 .contact-form {
-  border: 1px solid red;
   align-self: flex-end;
   width: 50%;
   color: var(--color-txt-primary);

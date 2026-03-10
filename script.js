@@ -99,6 +99,7 @@ function renderProject(project) {
 
 function init() {
   renderProject(projectsInfo[currentProjectIndex]);
+  initHeaderObserver();
 }
 
 function showNextProject() {
@@ -291,4 +292,42 @@ document.addEventListener("DOMContentLoaded", () => {
 //I need to disable false e-mail validation at chrome autofill!!
 //I also need to empty fields when msj was submitted
 
+function setHeader(section) {
+  const header = document.querySelector("header");
+  const theme = section.dataset.theme;
 
+  if (theme === "hero") {
+    header.classList.remove("header--compact--dark");
+    header.classList.remove("header--compact--light");
+    return;
+  }
+
+  if (theme === "dark") {
+    header.classList.add("header--compact--dark");
+    header.classList.remove("header--compact--light");
+    return;
+  }
+
+  if (theme === "light") {
+    header.classList.add("header--compact--light");
+    header.classList.remove("header--compact--dark");
+    return;
+  }
+}
+
+function initHeaderObserver() {
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setHeader(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    },
+  );
+  sections.forEach((section) => observer.observe(section));
+}

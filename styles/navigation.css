@@ -1,4 +1,4 @@
-/* Header styling */
+/* Header styling for HERO section */
 header {
   border: 1px solid red;
   width: 100%;
@@ -10,7 +10,7 @@ header {
   z-index: 100;
 }
 
-nav {
+ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,6 @@ a:hover .soc-media-icons .fill-shape {
   fill: var(--color-bg-hover);
 }
 
-/* added now */
 .menu-btn:hover .fill-shape {
   fill: var(--color-bg-hover);
 }
@@ -84,3 +83,40 @@ a:hover .soc-media-icons .fill-shape {
 .language-btn:hover {
   background-color: var(--color-bg-hover);
 }
+
+/* Compact header, dark and blue sections*/
+
+/* header:not(.header--hero) .social-media {
+  display: none;
+} */
+
+.header--compact--dark .social-media {
+  display: none;
+}
+
+/* Compact header, light sections */
+
+.header--compact--light .social-media {
+  display: none;
+}
+
+.header--compact--light .language-btn {
+  color: var(--color-txt-secondary);
+  border: 1px solid var(--color-txt-secondary);
+}
+
+.header--compact--light .language-btn:hover {
+  color: var(--color-txt-primary);
+}
+
+.header--compact--light .logo-txt-white {
+  color: var(--color-txt-secondary);
+}
+
+.header--compact--light .soc-media-icons .outline {
+  stroke: var(--color-tertiary);
+  fill: var(--color-tertiary);
+  stroke-width: 0.2;
+}
+
+

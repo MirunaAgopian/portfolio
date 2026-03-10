@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 8px 40px;
+  position: relative;
 }
 
 .social-media {
@@ -86,10 +87,6 @@ a:hover .soc-media-icons .fill-shape {
 
 /* Compact header, dark and blue sections*/
 
-/* header:not(.header--hero) .social-media {
-  display: none;
-} */
-
 .header--compact--dark .social-media {
   display: none;
 }
@@ -119,4 +116,86 @@ a:hover .soc-media-icons .fill-shape {
   stroke-width: 0.2;
 }
 
+/* Mobile-navbar styling */
+
+.mobile-nav {
+  border: 1px solid var(--color-txt-secondary);
+  background-color: var( --color-secondary);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 8px;
+  border-radius: 4px;
+  position: absolute;
+  right: 16px;
+  top: 8px;
+}
+
+.mobile-nav p {
+  color: var( --color-txt-tertiary);
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+}
+
+.menu-options a {
+  color: var( --color-txt-secondary);
+}
+
+.menu-options a:hover {
+  color: var(--color-txt-tertiary);
+  transform: scale(1.1);
+}
+
+.menu-btn-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  width: 90%;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-options li {
+ display: flex;
+}
+
+.menu-options a {
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+.soc-media-icons-mobile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding-top: 8px;
+  display: none;
+}
+
+.soc-media-icons-mobile {
+  cursor: pointer;
+}
+
+
+.soc-media-icons-mobile .outline {
+  fill: var(--color-tertiary);
+  stroke: var(--color-tertiary);
+}
+
+.soc-media-icons-mobile:hover .fill-shape {
+  fill: var(--color-bg-hover);
+}
+
+@media(max-width:850px){
+  .soc-media-icons-mobile-container {
+    display: flex;
+  }
+}
 

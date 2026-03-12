@@ -129,7 +129,16 @@ a:hover .soc-media-icons .fill-shape {
   position: absolute;
   right: 16px;
   top: 8px;
+  transform: translateX(150%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.mobile-nav.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 
 .mobile-nav p {
   color: var( --color-txt-tertiary);
@@ -139,11 +148,6 @@ a:hover .soc-media-icons .fill-shape {
 
 .menu-options a {
   color: var( --color-txt-secondary);
-}
-
-.menu-options a:hover {
-  color: var(--color-txt-tertiary);
-  transform: scale(1.1);
 }
 
 .menu-btn-mobile {
@@ -157,17 +161,36 @@ a:hover .soc-media-icons .fill-shape {
 .menu-options {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
 }
 
 .menu-options li {
  display: flex;
+ gap: 16px;
+ padding-bottom: 8px;
 }
 
 .menu-options a {
   font-size: 18px;
   font-weight: var(--fw-bold);
   cursor: pointer;
+}
+
+.menu-options li:hover a {
+  color: var(--color-txt-tertiary);
+  transform: scale(1.1);
+}
+
+.hover-img-menu {
+  display: none;
+  background-image: url("../assets/img/orange_wheel.png");
+  height: 24px;
+  width: 24px;
+  background-size: cover;
+}
+
+.menu-options li:hover .hover-img-menu {
+  display: block;
 }
 
 .soc-media-icons-mobile-container {

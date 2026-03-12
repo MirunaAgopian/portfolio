@@ -121,7 +121,7 @@
             </button>
           </li>
           <li>
-            <button class="menu-btn" aria-label="Open menu">
+            <button id="burger_menu" class="menu-btn" aria-label="Open menu">
               <svg
                 class="soc-media-icons"
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,11 +142,12 @@
           </li>
         </ul>
       </nav>
-      <nav class="mobile-nav">
+      <nav id="mobie_nav" class="mobile-nav">
         <div class="menu-btn-mobile">
           <p>Menu</p>
           <button>
             <img
+              id="close_mobile_menu_btn"
               class="close-mobile-menu-btn"
               src="./assets/img/close_btn_menu.png"
               alt="close button"
@@ -155,24 +156,24 @@
         </div>
         <ul class="menu-options">
           <li>
-            <div class="hover-img"></div>
-            <a href="#">About me</a>
+            <div class="hover-img-menu"></div>
+            <a href="#about">About me</a>
           </li>
           <li>
-            <div class="hover-img"></div>
-            <a href="#">Skillset</a>
+            <div class="hover-img-menu"></div>
+            <a href="#competencies">Skillset</a>
           </li>
           <li>
-            <div class="hover-img"></div>
-            <a href="#">Potfolio</a>
+            <div class="hover-img-menu"></div>
+            <a href="#projects">Potfolio</a>
           </li>
           <li>
-            <div class="hover-img"></div>
-            <a href="#">References</a>
+            <div class="hover-img-menu"></div>
+            <a href="#feedback">References</a>
           </li>
           <li>
-            <div class="hover-img"></div>
-            <a href="#">Contact me</a>
+            <div class="hover-img-menu"></div>
+            <a href="#contact">Contact me</a>
           </li>
         </ul>
         <div class="soc-media-icons-mobile-container">
@@ -195,7 +196,10 @@
               />
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/miruna-agopian-824320333/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/miruna-agopian-824320333/"
+            target="_blank"
+          >
             <svg
               class="soc-media-icons-mobile"
               width="32"
@@ -256,7 +260,9 @@
               <span>Hello there! I'm</span>
               <h1>Miruna Agopian</h1>
               <span>Frontend Developer</span>
-              <button class="get-in-touch">Get in Touch</button>
+              <button class="get-in-touch">
+                <a href="#contact">Get in Touch</a>
+              </button>
             </div>
             <div class="scroll-down-img">
               <img
@@ -333,7 +339,7 @@
               </p>
               <p>Let's connect and work togehter!</p>
               <div class="btn-txt">
-                <button>Let's talk</button>
+                <button><a href="#contact">Let's talk</a></button>
                 <img
                   class="emoji-img"
                   src="./assets/img/secret_info _emojis.png"

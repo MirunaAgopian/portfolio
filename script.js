@@ -292,9 +292,12 @@ document.addEventListener("DOMContentLoaded", () => {
 //I need to disable false e-mail validation at chrome autofill!!
 //I also need to empty fields when msj was submitted
 
+//Header functions
 function setHeader(section) {
   const header = document.querySelector("header");
   const theme = section.dataset.theme;
+
+  hideHeaderOnMobile(theme);
 
   if (theme === "hero") {
     header.classList.remove("header--compact--dark");
@@ -315,6 +318,39 @@ function setHeader(section) {
   }
 }
 
+function hideHeaderOnMobile(theme) {
+  const header = document.querySelector("header");
+  if (window.innerWidth <= 850) {
+    if (theme === "hero") {
+      header.classList.remove("d-none");
+    } else {
+      header.classList.add("d-none");
+    }
+    return;
+  }
+  header.classList.remove("d-none");
+}
+
+//checks the current section to update the header visibility
+function getCurrentSection() {
+  const sections = document.querySelectorAll("section");
+
+  for (const section of sections) {
+    const rect = section.getBoundingClientRect();
+    const inView =
+      rect.top < window.innerHeight * 0.5 &&
+      rect.bottom > window.innerHeight * 0.5;
+    if (inView) return section;
+  }
+
+  return null;
+}
+
+window.addEventListener("resize", () => {
+  const current = getCurrentSection();
+  if (current) setHeader(current);
+});
+
 function initHeaderObserver() {
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(
@@ -332,6 +368,7 @@ function initHeaderObserver() {
   sections.forEach((section) => observer.observe(section));
 }
 
+//Mobile nav and burger menu functions
 function toggleMobileNav(isOpen) {
   const nav = document.getElementById("mobie_nav");
   if (isOpen) {
@@ -341,12 +378,10 @@ function toggleMobileNav(isOpen) {
   }
 }
 
-document
-  .getElementById("burger_menu")
-  .addEventListener("click", (event) => {
-    event.stopPropagation();
-    toggleMobileNav(true)
-  });
+document.getElementById("burger_menu").addEventListener("click", (event) => {
+  event.stopPropagation();
+  toggleMobileNav(true);
+});
 
 document
   .getElementById("close_mobile_menu_btn")
@@ -354,14 +389,14 @@ document
 
 document.addEventListener("click", (event) => {
   const nav = document.getElementById("mobie_nav");
-  if(!nav.classList.contains("visible")) return;
-  if(nav.contains(event.target)) return;
+  if (!nav.classList.contains("visible")) return;
+  if (nav.contains(event.target)) return;
   toggleMobileNav(false);
 });
 
 const navLinks = document.querySelectorAll(".menu-options a");
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     toggleMobileNav(false);
   });
-})
+});

@@ -92,7 +92,7 @@ h1 {
 }
 
 .author-img {
-  height: clamp(350px, 75vw, 800px);
+  height: clamp(350px, 70vw, 800px);
   position: relative;
   display: block;
 }

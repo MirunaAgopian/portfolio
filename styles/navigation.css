@@ -217,12 +217,19 @@ a:hover .soc-media-icons .fill-shape {
 }
 
 @media(max-width:850px){
+  header {
+    background-color: var( --color-primary);
+  }
   .soc-media-icons-mobile-container {
     display: flex;
   }
 
   .social-media {
     display: none;
+  }
+
+  nav {
+    padding: 8px 16px;
   }
 }
 

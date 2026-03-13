@@ -250,4 +250,12 @@ li {
 }
 
 /* Mobile media queries */
+@media(max-width: 850px){
+  .right-container {
+    display: none;
+  }
 
+  .ab-me-section-content {
+    display: flex;
+  }
+}

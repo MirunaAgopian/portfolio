@@ -118,7 +118,7 @@ main {
   height: 100vh;
 }
 
-.section {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +127,15 @@ main {
   scroll-snap-stop: always;
 }
 
+
+@media(max-width: 850px) {
+  section {
+    height: auto;         
+    min-height: 100vh;     
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
 
 
 

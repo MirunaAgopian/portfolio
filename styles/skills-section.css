@@ -245,3 +245,46 @@
     font-size: 28px;
   }
 }
+
+/* Height media queries for small phones */
+
+@media(max-height: 800px) and (max-width: 450px) {
+  .blue-box {
+    height: 200px;
+    overflow-y: scroll;
+  }
+
+  .bottom-container-overlay-skills {
+    padding: 20px 0;
+  }
+
+  .wheel-wrapper {
+    height: 100px;
+    width: 100px;
+  }
+
+  .hat {
+    top: 32%;
+    right: 32%;
+  }
+}
+
+@media(max-height: 650px) and (max-width: 450px) {
+  .skills-container-left {
+    padding: 0;
+  }
+
+  .skills-icons {
+    gap: 2px;
+  }
+
+  .wheel-wrapper {
+    height: 80px;
+    width: 80px;
+  }
+
+  .hat {
+    top: 30%;
+    right: 28%;
+  }
+}

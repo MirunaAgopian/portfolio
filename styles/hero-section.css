@@ -220,9 +220,23 @@ h1 {
 }
 
 /* Height media queries */
+/* Iphone 14pro max*/
+@media(min-height: 900px) and (max-height: 1000px) and (max-width: 450px) {
+  .author-img {
+    height: 500px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero-container-left {
+    padding-top: 120px;
+  }
+}
 
 /* Standard phones */
-@media(min-height: 661px) and (max-height: 760px) and (max-width: 400px) {
+@media(min-height: 661px) and (max-height: 760px) and (max-width: 450px) {
   .author-img {
     height: 350px;
   }
@@ -237,7 +251,7 @@ h1 {
 
 
 /* Very short phones */ 
-@media(max-height: 660px) and (max-width: 400px){
+@media(max-height: 660px) and (max-width: 450px){
   .hero-container-left span {
     font-size: 1.3rem;
     padding-bottom: 8px;

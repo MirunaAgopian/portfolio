@@ -13,23 +13,10 @@
   padding: 0 60px;
   box-sizing: border-box;
   position: relative;
-  border: 1px solid blue;
 }
 
 .skills-section-content h2 {
   color: var(--color-txt-primary);
-}
-
-.section-content-column {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 0 60px;
-  border: 1px solid blue;
-  display: flex;
-  flex-direction: column;
 }
 
 .skills-container-left {
@@ -186,17 +173,20 @@
 
 /* Media queries for phones */
 
-@media(max-width: 850px) {
+@media (max-width: 850px) {
   .skills-container-right {
     display: none;
   }
 
   .skills-section-content {
     padding: 0 16px;
+    grid-template-columns: 1fr;
+    height: auto;
+    max-width: none;
   }
 }
 
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   .bottom-container-overlay-skills {
     flex-direction: column-reverse;
     gap: 13px;
@@ -227,14 +217,14 @@
   }
 }
 
-@media(max-width: 450px){
+@media (max-width: 450px) {
   .overlay-skills {
     left: 20px;
     top: -250px;
   }
 }
 
-@media(max-width: 350px){
+@media (max-width: 350px) {
   .blue-box {
     padding: 8px;
   }
@@ -250,7 +240,7 @@
 
 /* Height media queries for small phones */
 
-@media(max-height: 800px) and (max-width: 450px) {
+@media (max-height: 800px) and (max-width: 450px) {
   .blue-box {
     height: 200px;
     overflow-y: scroll;
@@ -271,7 +261,7 @@
   }
 }
 
-@media(max-height: 650px) and (max-width: 450px) {
+@media (max-height: 650px) and (max-width: 450px) {
   .skills-container-left {
     padding: 0;
   }

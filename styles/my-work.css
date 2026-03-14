@@ -9,7 +9,6 @@
   padding: 0 60px;
   box-sizing: border-box;
   position: relative;
-  border: 1px solid blue;
 }
 
 /* Left container */
@@ -239,6 +238,10 @@ span {
     height: 400px;
     margin-bottom: 32px;
   }
+
+  .header-txt {
+    margin-bottom: 0;
+  }
 }
 
 /* Media queries for phones */
@@ -254,6 +257,9 @@ span {
 @media(max-width: 850px) {
   .projects-section-content {
     padding: 0 16px;
+    grid-template-columns: 1fr; 
+    height: auto;
+    max-width: none; 
   }
 
   .header-txt {
@@ -388,8 +394,6 @@ span {
   }
 
   .black-box {
-    width: 280px;
-    height: 250px;
     padding: 8px;
   }
 
@@ -401,12 +405,6 @@ span {
 @media(max-height: 640px) and (max-width: 450px) {
   .project-img-container {
     height: 180px;
-  }
-
- .black-box {
-    width: 250px;
-    height: 230px;
-    padding: 8px;
   }
 
    .black-box p {

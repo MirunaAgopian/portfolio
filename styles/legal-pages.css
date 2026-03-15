@@ -3,8 +3,8 @@ body {
 }
 
 header {
-    background-color: var(--color-tertiary);
-  }
+  background-color: var(--color-tertiary);
+}
 
 .legals-main {
   display: flex;
@@ -23,10 +23,11 @@ header {
   color: var(--color-txt-primary);
   padding: 0 60px;
   padding-top: 120px;
+  border: 1px solid pink;
 }
 
 section {
-    height: auto;
+  height: auto;
 }
 
 .text-container {
@@ -48,13 +49,13 @@ section {
 }
 
 .text-container h2 {
-    font-family: var(--font-primary);
-    font-size: clamp(24px, 4vw, 32px);
-    color: var(--color-txt-quaternary);
+  font-family: var(--font-primary);
+  font-size: clamp(24px, 4vw, 32px);
+  color: var(--color-txt-quaternary);
 }
 
 span {
-    color: var(--color-txt-quinary);
+  color: var(--color-txt-quinary);
 }
 
 .lower-container {
@@ -62,6 +63,10 @@ span {
   margin-top: 100px;
 }
 
-
 /* Media queries */
 
+@media(max-width: 850px) {
+  .main-content {
+    padding: 60px 16px;
+  }
+}

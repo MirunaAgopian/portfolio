@@ -291,7 +291,10 @@ textarea::-webkit-scrollbar-thumb {
 .images-wrapper {
   position: relative;
   width: clamp(180px, 30vw, 350px);
+  border: 1px solid blue;
+  pointer-events: none;
 }
+
 
 .orange-wheel-footer {
   position: absolute;
@@ -301,6 +304,8 @@ textarea::-webkit-scrollbar-thumb {
   width: clamp(120px, 16vw, 180px);
   height: clamp(120px, 16vw, 180px);
   animation: rotateWheel 8s linear infinite;
+  border-radius: 50%;
+  border: 1px solid red;
 }
 
 .blue-wheel-footer {
@@ -311,7 +316,10 @@ textarea::-webkit-scrollbar-thumb {
   height: clamp(160px, 20vw, 250px);
   z-index: 2;
   animation: rotateOtherWay 8s linear infinite;
+  border-radius: 50%;
+  border: 1px solid red;
 }
+
 
 footer span,
 a {

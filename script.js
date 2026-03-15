@@ -220,7 +220,7 @@ function handleBlurTextarea() {
   const textarea = document.getElementById("message");
   const textareaValue = textarea.value.trim();
 
-  if ((textareaValue === "") | (textareaValue.length < 10)) {
+  if ((textareaValue === "") | (textareaValue.length < 5)) {
     textarea.classList.add("error");
     textarea.placeholder = "Please enter your message.";
   } else {
@@ -262,7 +262,7 @@ function updateSubmitButtonState() {
     emailValue.length > 0 && !emailField.classList.contains("error");
 
   const messageValid =
-    messageValue.length >= 10 && !textarea.classList.contains("error");
+    messageValue.length >= 5 && !textarea.classList.contains("error");
 
   const checkboxChecked = checkbox.classList.contains("checked");
 

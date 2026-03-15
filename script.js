@@ -1,5 +1,7 @@
 const DOM = selectProjectDOM();
 let currentProjectIndex = 0;
+let privacyCheckBoxChecked = false;
+let currentLang = "en";
 
 function showAbMeOverlay(show) {
   const overlay = document.getElementById("ab_me");
@@ -94,28 +96,29 @@ function renderProject(project) {
     span.textContent = project.projectTechnologies[i] || "";
   });
 
-  DOM.projectCounterDom.textContent = `${currentProjectIndex + 1}/${projectsInfo.length}`;
+  DOM.projectCounterDom.textContent = `${currentProjectIndex + 1}/${projectsInfo[currentLang].length}`;
 }
 
 function init() {
-  renderProject(projectsInfo[currentProjectIndex]);
+  renderProject(projectsInfo[currentLang][currentProjectIndex]);
   initHeaderObserver();
+  applyTranslations(currentLang);
 }
 
 function showNextProject() {
   currentProjectIndex++;
-  if (currentProjectIndex >= projectsInfo.length) {
+  if (currentProjectIndex >= projectsInfo[currentLang].length) {
     currentProjectIndex = 0;
   }
-  renderProject(projectsInfo[currentProjectIndex]);
+  renderProject(projectsInfo[currentLang][currentProjectIndex]);
 }
 
 function showPreviousProject() {
   currentProjectIndex--;
   if (currentProjectIndex < 0) {
-    currentProjectIndex = projectsInfo.length - 1;
+    currentProjectIndex = projectsInfo[currentLang].length - 1;
   }
-  renderProject(projectsInfo[currentProjectIndex]);
+  renderProject(projectsInfo[currentLang][currentProjectIndex]);
 }
 
 //creates smooth scroll behaviour to hero for the bouncing arrow
@@ -138,7 +141,7 @@ function handleBlurName() {
 
   if (nameInputValue === "" || nameInputValue.length < 3) {
     nameField.classList.add("error");
-    nameField.placeholder = "Please enter your name.";
+    nameField.placeholder = domInfo[currentLang].contactFormNameError;
   } else {
     nameField.classList.remove("error");
     nameField.placeholder = "";
@@ -146,71 +149,15 @@ function handleBlurName() {
   updateSubmitButtonState();
 }
 
-// function handleBlurEmail() {
-//   const emailField = document.getElementById("email");
-//   const emailInputValue = emailField.value.trim();
-//   const atIndex = emailInputValue.indexOf("@");
-//   const dotIndex = emailInputValue.indexOf(".", atIndex + 1);
-//   const localPart = emailInputValue.slice(0, atIndex);
-//   const allowedCharacters =
-//     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-";
-//   let invalidCharacterFound = false;
-//   for (let character of localPart) {
-//     if (!allowedCharacters.includes(character)) {
-//       invalidCharacterFound = true;
-//       break;
-//     }
-//   }
-
-//   const isInvalid =
-//     emailInputValue === "" ||
-//     invalidCharacterFound ||
-//     //No @ found
-//     atIndex === -1 ||
-//     //No . after @
-//     dotIndex === -1 ||
-//     //Dot placement rules
-//     dotIndex < atIndex ||
-//     dotIndex === atIndex + 1 ||
-//     dotIndex === emailInputValue.length - 1 ||
-//     //Domain and top-level-domain rules
-//     dotIndex - atIndex - 1 < 2 ||
-//     emailInputValue.length - dotIndex - 1 < 2 ||
-//     //Double characters
-//     emailInputValue.includes("..") ||
-//     emailInputValue.includes("--") ||
-//     emailInputValue.includes("__") ||
-//     emailInputValue.includes("@@") ||
-//     // End of local part rules
-//     emailInputValue[atIndex - 1] === "." ||
-//     emailInputValue[atIndex - 1] === "-" ||
-//     emailInputValue[atIndex - 1] === "_" ||
-//     // Start of local part rules
-//     localPart[0] === "-" ||
-//     localPart[0] === "_" ||
-//     localPart[0] === "." ||
-//     //ENd of domain rules, no "_" or "-" after domain name
-//     emailInputValue[dotIndex - 1] === "-" ||
-//     emailInputValue[dotIndex - 1] === "_";
-
-//   if (isInvalid) {
-//     emailField.classList.add("error");
-//     emailField.placeholder = "Please enter your email.";
-//   } else {
-//     emailField.classList.remove("error");
-//     emailField.placeholder = "";
-//   }
-
-//   updateSubmitButtonState();
-// }
-
 function handleBlurEmail() {
   const emailField = document.getElementById("email");
 
   if (!emailField.checkValidity()) {
     emailField.classList.add("error");
+    emailField.placeholder = domInfo[currentLang].contactFormMailError;
   } else {
     emailField.classList.remove("error");
+    emailField.placeholder = "";
   }
 
   updateSubmitButtonState();
@@ -222,7 +169,7 @@ function handleBlurTextarea() {
 
   if ((textareaValue === "") | (textareaValue.length < 5)) {
     textarea.classList.add("error");
-    textarea.placeholder = "Please enter your message.";
+    textarea.placeholder = domInfo[currentLang].contactFormTextareaError;
   } else {
     textarea.classList.remove("error");
     textarea.placeholder = "";
@@ -232,16 +179,27 @@ function handleBlurTextarea() {
 
 function handleCheckbox() {
   const checkbox = document.getElementById("checkbox");
-  const submitBtn = document.getElementById("submit_msg");
-  const errorMsg = document.getElementById("error_msg_container");
+  privacyCheckBoxChecked = true;
 
   checkbox.classList.toggle("checked");
+  updatePrivacyErrorText();
+  updateSubmitButtonState();
+}
+
+function updatePrivacyErrorText() {
+  const checkbox = document.getElementById("checkbox");
+  const errorMsg = document.getElementById("error_msg_container");
+
+  if (!privacyCheckBoxChecked) {
+    errorMsg.textContent = "";
+    return;
+  }
+
   if (checkbox.classList.contains("checked")) {
     errorMsg.textContent = "";
   } else {
-    errorMsg.textContent = "Please agree to the privacy policy.";
+    errorMsg.textContent = domInfo[currentLang].contactPrivacyPolicyError;
   }
-  updateSubmitButtonState();
 }
 
 function updateSubmitButtonState() {
@@ -400,3 +358,35 @@ navLinks.forEach((link) => {
     toggleMobileNav(false);
   });
 });
+
+// Functions for translating the DOM texts
+
+document.getElementById("lang_btn").addEventListener("click", () => {
+  currentLang = currentLang === "en" ? "de" : "en";
+  document.getElementById("lang_btn").textContent = currentLang.toUpperCase();
+
+  renderProject(projectsInfo[currentLang][currentProjectIndex]);
+  applyTranslations(currentLang);
+
+  updatePrivacyErrorText();
+});
+
+function applyTranslations(lang) {
+  // 1. Normal text
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = domInfo[lang][key];
+  });
+
+  // 2. Placeholders
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.setAttribute("placeholder", domInfo[lang][key]);
+  });
+
+  // 3. HTML content
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-html");
+    el.innerHTML = domInfo[lang][key];
+  });
+}

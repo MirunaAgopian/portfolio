@@ -281,6 +281,11 @@ textarea::-webkit-scrollbar-thumb {
   font-weight: var(--fw-normal);
 }
 
+.privacy-span {
+  color: var(--color-txt-primary);
+  font-weight: var(--fw-normal);
+}
+
 /* Footer and images */
 
 .lower-container {

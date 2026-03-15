@@ -117,9 +117,7 @@
         </a>
         <ul class="lang-nav">
           <li>
-            <button aria-label="Change language">
-              <button class="language-btn">EN</button>
-            </button>
+            <button id="lang_btn" class="language-btn">EN</button>
           </li>
           <li>
             <button id="burger_menu" class="menu-btn" aria-label="Open menu">
@@ -145,7 +143,7 @@
       </nav>
       <nav id="mobie_nav" class="mobile-nav">
         <div class="menu-btn-mobile">
-          <p>Menu</p>
+          <p data-i18n="navTitle">Menu</p>
           <button>
             <img
               id="close_mobile_menu_btn"
@@ -158,23 +156,23 @@
         <ul class="menu-options">
           <li>
             <div class="hover-img-menu"></div>
-            <a href="#about">About me</a>
+            <a href="#about" data-i18n="navHero">About me</a>
           </li>
           <li>
             <div class="hover-img-menu"></div>
-            <a href="#competencies">Skillset</a>
+            <a href="#competencies" data-i18n="navSkills">Skillset</a>
           </li>
           <li>
             <div class="hover-img-menu"></div>
-            <a href="#projects">Potfolio</a>
+            <a href="#projects" data-i18n="navProjects">Potfolio</a>
           </li>
           <li>
             <div class="hover-img-menu"></div>
-            <a href="#feedback">References</a>
+            <a href="#feedback" data-i18n="navFeedback">References</a>
           </li>
           <li>
             <div class="hover-img-menu"></div>
-            <a href="#contact">Contact me</a>
+            <a href="#contact" data-i18n="navContact">Contact me</a>
           </li>
         </ul>
         <div class="soc-media-icons-mobile-container">
@@ -258,11 +256,11 @@
         <div class="section-content">
           <div class="hero-container-left">
             <div class="txt-hero">
-              <span>Hello there! I'm</span>
+              <span data-i18n="heroUpperSpan">Hello there! I'm</span>
               <h1>Miruna Agopian</h1>
-              <span>Frontend Developer</span>
+              <span data-i18n="heroLowerSpan">Frontend Developer</span>
               <button class="get-in-touch">
-                <a href="#contact">Get in Touch</a>
+                <a href="#contact" data-i18n="heroBtn">Get in Touch</a>
               </button>
             </div>
             <div class="scroll-down-img">
@@ -327,9 +325,9 @@
             />
           </div>
           <div class="middle-container">
-            <h2>About me</h2>
+            <h2 data-i18n="abMeHeader">About me</h2>
             <div class="txt-box-container">
-              <p>
+              <p data-i18n="abMeDescription">
                 Hi there, I'm Miruna. My career in IT started from a desire to
                 create something of my own — my own apps and websites. I strive
                 to design intuitive user experiences and write code that is
@@ -338,9 +336,13 @@
                 understanding of core fundamentals and the ability to apply
                 recurring concepts effectively.
               </p>
-              <p>Let's connect and work togehter!</p>
+              <p data-i18n="abMeDescriptionLower">
+                Let's connect and work togehter!
+              </p>
               <div class="btn-txt">
-                <button><a href="#contact">Let's talk</a></button>
+                <button>
+                  <a href="#contact" data-i18n="abMeBtn">Let's talk</a>
+                </button>
                 <img
                   class="emoji-img"
                   src="./assets/img/secret_info _emojis.png"
@@ -350,7 +352,7 @@
                 />
               </div>
               <div id="ab_me" class="ab-me-overlay d-none">
-                <span>More about me</span>
+                <span data-i18n="abMeOverlaySpan">More about me</span>
                 <ul>
                   <li>
                     <img
@@ -358,47 +360,54 @@
                       src="./assets/img/check_circle.png"
                       alt="check mark"
                     />
-                    Team player
+                    <p data-i18n="abMeLiFirst">Team player</p>
                   </li>
+
                   <li>
                     <img
                       class="check-img"
                       src="./assets/img/check_circle.png"
                       alt="check mark"
                     />
-                    Highly motivated
+                    <p data-i18n="abMeLiSecond">Highly motivated</p>
                   </li>
+
                   <li>
                     <img
                       class="check-img"
                       src="./assets/img/check_circle.png"
                       alt="check mark"
                     />
-                    Analytical thinker
+                    <p data-i18n="abMeLiThird">Analytical thinker</p>
                   </li>
+
                   <li>
                     <img
                       class="check-img"
                       src="./assets/img/check_circle.png"
                       alt="check mark"
                     />
-                    Structured working style
+                    <p data-i18n="abMeLiFourth">Structured working style</p>
                   </li>
+
                   <li>
                     <img
                       class="check-img"
                       src="./assets/img/check_circle.png"
                       alt="check mark"
                     />
-                    Based in Mannheim
+                    <p data-i18n="abMeLiFifth">Based in Mannheim</p>
                   </li>
+
                   <li>
                     <img
                       class="check-img"
                       src="./assets/img/check_circle.png"
                       alt="check mark"
                     />
-                    German, English & Romanian speaker
+                    <p data-i18n="abMeLiSixth">
+                      German, English & Romanian speaker
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -439,9 +448,9 @@
         <div class="skills-section-content">
           <div class="skills-container-left">
             <div class="header-and-box">
-              <h2>Core Competencies</h2>
+              <h2 data-i18n="competencieadHeader">Core Competencies</h2>
               <div class="blue-box">
-                <p>
+                <p data-i18n="competenciesDescription">
                   I develop clean, maintainable frontend applications using
                   HTML, CSS, JavaScript, Angular, and TypeScript. I work
                   confidently with asynchronous programming and OOP principles,
@@ -475,8 +484,10 @@
                       onclick="showSkillsOverlay(false)"
                     />
                   </button>
-                  <p>Don't you find the skill you need?</p>
-                  <p>
+                  <p data-i18n="competenciesOverlayUpper">
+                    Don't you find the skill you need?
+                  </p>
+                  <p data-i18n="competenciesOverlayLower">
                     I'm currently expanding my knowledge. I have a special
                     interest in learning:
                   </p>
@@ -598,8 +609,8 @@
         <div class="projects-section-content">
           <div class="left-container">
             <div class="header-txt">
-              <h2>My work</h2>
-              <p>
+              <h2 data-i18n="myWorkHeader">My work</h2>
+              <p data-i18n="myWorkSubheader">
                 Have a look at my projects - Test them to better understand my
                 skills in action.
               </p>
@@ -674,13 +685,16 @@
                   </div>
                 </div>
                 <div class="lower-btns">
-                  <span onclick="showPreviousProject()">
+                  <span
+                    onclick="showPreviousProject()"
+                    data-i18n="myWorkBtnPrev"
+                  >
                     &lt;&lt; Previous project</span
                   >
                   <div class="counter">
                     <p></p>
                   </div>
-                  <span onclick="showNextProject()">
+                  <span onclick="showNextProject()" data-i18n="myWorkBtnNext">
                     Next project &gt;&gt;</span
                   >
                 </div>
@@ -717,7 +731,7 @@
       <section id="feedback" data-theme="dark" class="section section--blue">
         <div class="ref-section-content">
           <div class="ref-left-container">
-            <h2>What my colleagues say about me</h2>
+            <h2 data-i18n="feedbackHeader">What my colleagues say about me</h2>
             <div class="feedbacks-container">
               <div class="wrapper-feedback-box1">
                 <div class="feedback-box1">
@@ -725,7 +739,7 @@
                     <h3>Emin Fatih Halici</h3>
                     <div class="hover-img"></div>
                   </div>
-                  <p>
+                  <p data-i18n="feedbackBoxDescriptionFirst">
                     Working with Miruna was truly enriching. She combines strong
                     analytical skills with an organized way of working. Her
                     understanding of software architectures and her ability to
@@ -734,11 +748,12 @@
                     communicates as an equal — a top recommendation for any
                     team.
                   </p>
-                  <span>Frontend developer</span>
+                  <span data-i18n="feedbackSpan">Frontend developer</span>
                 </div>
                 <a
                   href="https://www.linkedin.com/in/emin-fatih-halici/"
                   target="_blank"
+                  data-i18n="feedbackLink"
                   >To Linkedin profile >></a
                 >
               </div>
@@ -748,7 +763,7 @@
                     <h3>Patrick Schütte</h3>
                     <div class="hover-img"></div>
                   </div>
-                  <p>
+                  <p data-i18n="feedbackBoxDescriptionSecond">
                     Miruna is an extremely reliable and highly competent
                     frontend developer, and working with her on the Join project
                     was always productive and pleasant. She works in a
@@ -756,11 +771,12 @@
                     creative solutions. Her teamwork skills and her eye for
                     clean, maintainable code are particularly noteworthy.
                   </p>
-                  <span>Frontend developer</span>
+                  <span data-i18n="feedbackSpan">Frontend developer</span>
                 </div>
                 <a
                   href="https://www.linkedin.com/in/patrickschuette/"
                   target="_blank"
+                  data-i18n="feedbackLink"
                   >To Linkedin profile >></a
                 >
               </div>
@@ -770,16 +786,16 @@
                     <h3>Benjamin Mahalbasic</h3>
                     <div class="hover-img"></div>
                   </div>
-                  <p>
+                  <p data-i18n="feedbackBoxDescriptionThird">
                     I would like to give some brief positive feedback about
                     Miruna. What stands out most is her very structured and
                     clear way of working. She approaches tasks thoughtfully and
                     implements them cleanly, which makes collaboration within
                     the team very pleasant and efficient. Thank you for that!
                   </p>
-                  <span>Frontend developer</span>
+                  <span data-i18n="feedbackSpan">Frontend developer</span>
                 </div>
-                <a href="#">To Linkedin profile >></a>
+                <a href="#" data-i18n="feedbackLink">To Linkedin profile >></a>
               </div>
             </div>
           </div>
@@ -815,10 +831,12 @@
           <div class="left-container-contact">
             <div class="upper-container">
               <div class="header-subheader">
-                <h2>Let's build something cool together!</h2>
+                <h2 data-i18n="contactHeader">
+                  Let's build something cool together!
+                </h2>
                 <div class="subheader-txt">
-                  <h3>Got a problem to solve?</h3>
-                  <p>
+                  <h3 data-i18n="contactSubheader">Got a problem to solve?</h3>
+                  <p data-i18n="contactDescription">
                     Then I am here to solve it. Just hit me and let work
                     together. I like new challenges and love working in team.
                   </p>
@@ -846,35 +864,41 @@
                 <form action="/send-message" method="POST">
                   <div class="upper-form">
                     <div class="name-container">
-                      <label for="name">What's your name?</label>
+                      <label for="name" data-i18n="contactFormName"
+                        >What's your name?</label
+                      >
                       <input
                         type="text"
                         name="name"
                         id="name"
                         required
-                        placeholder="Your name goes here"
+                        data-i18n-placeholder="contactFormNamePlaceholder"
                         maxlength="50"
                       />
                     </div>
                     <div class="mail-container">
-                      <label for="email">What's your email?</label>
+                      <label for="email" data-i18n="contactFormMail"
+                        >What's your email?</label
+                      >
                       <input
                         type="email"
                         name="email"
                         id="email"
                         required
-                        placeholder="youremail@email.com"
+                        data-i18n-placeholder="contactFormMailPlaceholder"
                       />
                     </div>
                   </div>
                   <div class="textarea-container">
-                    <label for="message">How can I help you?</label>
+                    <label for="message" data-i18n="contactFormTextarea"
+                      >How can I help you?</label
+                    >
                     <textarea
                       autocomplete="off"
                       rows="2"
                       name="message"
                       id="message"
-                      placeholder="Hello Miruna, I am interested in..."
+                      data-i18n-placeholder="contactFormTextareaPlaceholder"
                     ></textarea>
                   </div>
                   <div class="privacy-policy">
@@ -883,14 +907,31 @@
                         <div id="checkbox" class="checkbox"></div>
                       </div>
                       <p>
-                        I've read the
-                        <a href="./html/privacy-policy.html">privacy policy</a>
-                        and agree to the processing of my data.
+                        <span
+                          class="privacy-span"
+                          data-i18n="contactPrivacyPolicyTextBefore"
+                          >I have read the</span
+                        >
+                        <a
+                          href="./html/privacy-policy.html"
+                          data-i18n="contactPrivacyPolicyLinkText"
+                          >privacy policy
+                        </a>
+                        <span
+                          class="privacy-span"
+                          data-i18n="contactPrivacyPolicyTextAfter"
+                          >and agree to the processing of my data.</span
+                        >
                       </p>
                     </div>
                     <span id="error_msg_container" class="error-message"></span>
                   </div>
-                  <button id="submit_msg" class="submit-message-btn" disabled>
+                  <button
+                    data-i18n="contactBtn"
+                    id="submit_msg"
+                    class="submit-message-btn"
+                    disabled
+                  >
                     Drop a line
                   </button>
                 </form>
@@ -912,7 +953,9 @@
               <footer>
                 <span>&#xA9; Miruna Agopian 2026</span>
                 <div class="socials-contaier">
-                  <a href="./html/legal-notice.html">Legal notice</a>
+                  <a data-i18n="footerLink" href="./html/legal-notice.html"
+                    >Legal notice</a
+                  >
                   <a
                     href="https://www.linkedin.com/in/miruna-agopian-824320333/"
                     target="_blank"

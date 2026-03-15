@@ -127,6 +127,9 @@ section {
   scroll-snap-stop: always;
 }
 
+.side-dots li {
+  cursor: pointer;
+}
 
 @media(max-width: 850px) {
   section {

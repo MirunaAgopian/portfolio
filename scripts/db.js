@@ -168,7 +168,7 @@ const domInfo = {
     competenciesOverlayLower:
       "Ich erweitere aktuell mein Wissen. Besonders interessieren mich folgende Themen:",
 
-    myWorkHeader: "Meine Arbeit",
+    myWorkHeader: "Meine Projekte",
     myWorkSubheader:
       "Schau dir meine Projekte an – teste sie, um meine Fähigkeiten in Aktion zu sehen.",
     myWorkBtnPrev: "<< Vorheriges Projekt",

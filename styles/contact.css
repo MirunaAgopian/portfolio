@@ -76,7 +76,7 @@
   width: 50%;
   color: var(--color-txt-primary);
   height: 400px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -295,9 +295,12 @@ textarea::-webkit-scrollbar-thumb {
 
 .images-wrapper {
   position: relative;
-  width: clamp(180px, 30vw, 350px);
-  border: 1px solid blue;
+  width: 240px;
   pointer-events: none;
+  overflow: hidden;
+  height: 150px;
+  transform: scale(1.1); 
+  transform-origin: bottom center;
 }
 
 
@@ -306,23 +309,19 @@ textarea::-webkit-scrollbar-thumb {
   left: 0;
   bottom: 0;
   z-index: 1;
-  width: clamp(120px, 16vw, 180px);
-  height: clamp(120px, 16vw, 180px);
+  width: 110px;
+  height: 110px; 
   animation: rotateWheel 8s linear infinite;
-  border-radius: 50%;
-  border: 1px solid red;
 }
 
 .blue-wheel-footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: clamp(160px, 20vw, 250px);
-  height: clamp(160px, 20vw, 250px);
+  width: 150px;
+  height: 150px;
   z-index: 2;
   animation: rotateOtherWay 8s linear infinite;
-  border-radius: 50%;
-  border: 1px solid red;
 }
 
 
@@ -375,15 +374,6 @@ footer {
   }
 }
 
-@media (max-width: 950px) {
-  .header-subheader {
-    width: 40%;
-  }
-
-  .contact-form {
-    width: 60%;
-  }
-}
 
 /* Laptops media queries */
 @media (min-height: 650px) and (max-height: 800px) and (min-width: 1200px) {
@@ -416,6 +406,15 @@ footer {
 }
 
 /* Media queries for mobile devices */
+@media (max-width: 950px) {
+  .header-subheader {
+    width: 40%;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
+}
 
 @media (max-width: 850px) {
   .contact-footer-content {
@@ -459,7 +458,7 @@ footer {
   }
 
   .images-wrapper {
-    width: clamp(180px, 35vw, 350px);
+    width: 240px;
   }
 }
 
@@ -470,10 +469,6 @@ footer {
 
   footer {
     width: 100%;
-  }
-
-  .images-wrapper {
-    width: 250px;
   }
 }
 
@@ -495,5 +490,19 @@ footer {
 
   .checkbox-and-text {
     margin-top: 16px;
+  }
+
+  .blue-wheel-footer {
+    height: 120px;
+    width: 120px;
+  }
+
+  .orange-wheel-footer {
+    height: 80px;
+    width: 80px;
+  }
+
+  .images-wrapper {
+    width: 180px;
   }
 }

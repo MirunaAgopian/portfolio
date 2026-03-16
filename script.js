@@ -383,10 +383,4 @@ function applyTranslations(lang) {
     const key = el.getAttribute("data-i18n-placeholder");
     el.setAttribute("placeholder", domInfo[lang][key]);
   });
-
-  // 3. HTML content
-  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-html");
-    el.innerHTML = domInfo[lang][key];
-  });
 }

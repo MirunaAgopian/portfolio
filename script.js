@@ -133,6 +133,24 @@ document.querySelector(".go-up-link a").addEventListener("click", function (e) {
   });
 });
 
+//Smooth scroll behaviour for side dots
+
+document.querySelectorAll(".side-dots a").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+    const scroller = document.querySelector("main");
+
+    scroller.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
+
+
 // Functions for input in contact form
 
 function handleBlurName() {

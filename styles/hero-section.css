@@ -93,7 +93,6 @@ h1 {
 }
 
 .author-img {
-  /* height: clamp(350px, 70vw, 800px); */
   height: clamp(350px, 80vh, 800px);
   position: relative;
   display: block;
@@ -126,10 +125,6 @@ h1 {
   h1 {
     font-size: 64px;
   }
-
-  /* .author-img {
-    height: 600px;
-  } */
 
   .orange-wheel-hero {
     height: 200px;
@@ -170,10 +165,6 @@ h1 {
   .hero-container-center {
     align-self: center;
   }
-
-  /* .author-img {
-    height: 450px;
-  } */
 
   .author-img {
     height: clamp(250px, 50vh, 800px);
@@ -228,10 +219,7 @@ h1 {
 /* Height media queries */
 /* Iphone 14pro max*/
 @media(min-height: 900px) and (max-height: 1000px) and (max-width: 450px) {
-  /* .author-img {
-    height: 500px;
-  } */
-
+  
   h1 {
     font-size: 3rem;
   }
@@ -243,10 +231,6 @@ h1 {
 
 /* Standard phones */
 @media(min-height: 661px) and (max-height: 760px) and (max-width: 450px) {
-  /* .author-img {
-    height: 350px;
-  } */
-
   .orange-wheel-hero {
     left: 100px;
     height: 120px;
@@ -268,10 +252,6 @@ h1 {
     padding-bottom: 8px;
   }
 
-  /* .author-img {
-    height: 300px;
-  } */
-
   .orange-wheel-hero {
     left: 100px;
     height: 80px;
@@ -285,48 +265,41 @@ h1 {
   }
 }
 
-/* Tablet  - test*/
-/* 
-@media (min-width: 600px) and (max-width: 1199px) and (orientation: portrait) {
-  .hero-container-right {
-    display: none;
-  }
+/* Tablet - portrait */
+/* Small tablets */
+@media (min-width: 900px) and (max-width: 1280px)
+  and (min-height: 600px) and (max-height: 800px)
+  and (orientation: landscape) {
+    h1 {
+      font-size: 40px;
+    }
 
-  .section-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    padding: 0 16px;
-  }
+    .hero-container-left span {
+      font-size: 24px;
+    }
 
-  .hero-container-left {
-    padding-top: 120px;
-    width: 100%;
-  }
+    .overlay-skills {
+      top: -40;
+    }
 
-  .hero-container-center {
-    align-self: center;
-  }
+}
 
-  .author-img {
-    height: 800px;
-  }
 
-  .orange-wheel-hero {
-    height: 250px;
-    width: 250px;
-    left: 300px;
-    top: 100px;
-  }
+/* Medium tablets */
 
-   .scroll-down-img {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 50;
-  }
-} */
+@media (min-width: 768px) and (max-width: 834px)
+  and (min-height: 1024px) and (max-height: 1180px)
+  and (orientation: portrait) {
+
+
+}
+
+/* Large tablets */
+@media (min-width: 835px) and (max-width: 1024px)
+  and (min-height: 1181px) and (max-height: 1366px)
+  and (orientation: portrait) {
+
+}
+
 
 

@@ -106,7 +106,7 @@ const domInfo = {
     feedbackBoxDescriptionThird:
       "I would like to give some brief positive feedback about Miruna. What stands out most is her very structured and clear way of working. She approaches tasks thoughtfully and implements them cleanly, which makes collaboration within the team very pleasant and efficient. Thank you for that!",
     feedbackSpan: "Frontend developer",
-    feedbackLink: "To Linkedin profile",
+    feedbackLink: "To Linkedin profile >>",
 
     contactHeader: "Let's build something cool together!",
     contactSubheader: "Got a problem to solve?",
@@ -182,7 +182,7 @@ const domInfo = {
     feedbackBoxDescriptionThird:
       "Ich möchte gerne ein kurzes positives Feedback zu Miruna geben. Besonders hervorzuheben ist ihre sehr strukturierte und klare Arbeitsweise. Sie geht Aufgaben durchdacht an und setzt sie sauber um, was die Zusammenarbeit im Team sehr angenehm und effizient macht. Vielen Dank dafür!",
     feedbackSpan: "Frontend Entwicklerin",
-    feedbackLink: "Zum LinkedIn‑Profil",
+    feedbackLink: "Zum LinkedIn‑Profil >>",
 
     contactHeader: "Lass uns etwas Großartiges schaffen!",
     contactSubheader: "Ein Problem zu lösen?",

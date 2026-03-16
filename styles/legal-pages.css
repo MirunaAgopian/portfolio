@@ -52,6 +52,10 @@ section {
   color: var(--color-txt-quaternary);
 }
 
+.text-container p {
+  text-align: justify;
+}
+
 span {
   color: var(--color-txt-quinary);
 }

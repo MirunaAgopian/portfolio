@@ -141,6 +141,7 @@
 @media (min-height: 500px) and (max-height: 800px) and (min-width: 1200px) {
   .ref-left-container h2 {
     margin-block-end: 16px;
+    font-size: 60px;
   }
 
   .feedbacks-container {
@@ -185,4 +186,19 @@
   .ref-left-container a {
     margin-bottom: 8px;
   }
+}
+
+/* Tablet - portrait */
+/* Small tablets */
+@media (min-width: 900px) and (max-width: 1280px)
+  and (min-height: 600px) and (max-height: 800px)
+  and (orientation: landscape) {
+    .feedbacks-container {
+      grid-auto-rows: 400px;
+    }
+
+    .ref-left-container h2 {
+      font-size: 60px;
+    }
+
 }

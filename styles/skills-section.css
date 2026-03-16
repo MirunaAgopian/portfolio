@@ -282,12 +282,37 @@
 }
 
 /* Tablet - portrait */
-/* Small tablets */
+/* Small tablets - landscape */
 @media (min-width: 900px) and (max-width: 1280px)
   and (min-height: 600px) and (max-height: 800px)
   and (orientation: landscape) {
     .overlay-skills {
       top: -80px;
     }
+}
 
+/* Medium tablets - potriat */
+@media (min-width: 768px) and (max-width: 834px)
+  and (min-height: 1024px) and (max-height: 1180px)
+  and (orientation: portrait) {
+    .overlay-skills {
+      left: 160px;
+    }
+}
+
+/* Large tablets - portrait */
+@media (min-width: 835px) and (max-width: 1024px)
+  and (min-height: 1181px) and (max-height: 1366px)
+  and (orientation: portrait) {
+    .skills-container-right {
+      display: none;
+    }
+
+    .blue-box {
+      margin-top: 200px;
+    }
+
+    .bottom-container-overlay-skills {
+      margin-bottom: 200px;
+    }
 }

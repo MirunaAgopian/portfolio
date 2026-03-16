@@ -373,7 +373,7 @@ span {
 
 @media(max-height: 800px) and (max-width: 450px) {
   .project-img-container {
-    height: 200px;
+    height: 220px;
   }
 
   .project-img {
@@ -418,5 +418,34 @@ span {
 
     .header-txt p {
       margin-block-end: 4px;
+    }
+}
+
+/* Large tablets - portrait */
+@media (min-width: 835px) and (max-width: 1024px)
+  and (min-height: 1181px) and (max-height: 1366px)
+  and (orientation: portrait) {
+    .projects-section-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-txt {
+      margin: 60px 0;
+    }
+
+    .projects-container {
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .project-img-container {
+      max-width: 740px;
+      height: 500px;
+    }
+
+    .project-img {
+      max-width: 600px;
     }
 }

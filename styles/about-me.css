@@ -338,3 +338,42 @@ li {
     margin-top: 140px;
   }
 }
+
+/* Tablets mediw queries - landscape and potrtait */
+
+/* Medium tablets (8–10") landscape */
+@media (min-width: 1024px) and (max-width: 1180px)
+  and (min-height: 768px) and (max-height: 834px)
+  and (orientation: landscape) {
+    .ab-me-overlay{
+      top: 250px;
+      right: 32px;
+    }
+}
+
+/* Medium tablets (8–10") portrait */
+@media (min-width: 768px) and (max-width: 834px)
+  and (min-height: 1024px) and (max-height: 1180px)
+  and (orientation: portrait) {
+    .ab-me-overlay {
+      height: 250px;
+      top: 420px;
+    }
+}
+
+/* Large tablets - portrait */
+@media (min-width: 835px) and (max-width: 1024px)
+  and (min-height: 1181px) and (max-height: 1366px)
+  and (orientation: portrait) {
+    .right-container {
+      display: none;
+    }
+
+    .left-img-container {
+      align-self: center;
+    }
+
+    .txt-box-container {
+      margin-top: 300px;
+    }
+}

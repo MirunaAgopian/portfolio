@@ -339,7 +339,23 @@ li {
   }
 }
 
-/* Tablets mediw queries - landscape and potrtait */
+/* Phones - landscape */
+@media(min-width: 480px) and (max-width:950px) and (min-height: 250px) and (max-height:450px) and (orientation: landscape){
+   .ab-me-section-content {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .txt-box-container {
+    margin-top: 0;
+  }
+
+  .ab-me-overlay {
+    top: 100px;
+}
+}
+
+/* Tablets media queries - landscape and potrtait */
 
 /* Medium tablets (8–10") landscape */
 @media (min-width: 1024px) and (max-width: 1180px)

@@ -81,7 +81,6 @@ h1 {
 .hero-container-center {
   align-self: end;
   position: relative;
-  border: 1px solid red;
 }
 
 .orange-wheel-hero {
@@ -134,7 +133,7 @@ h1 {
 
 }
 
-/* Mobile media queries */
+/* Mobile media queries - portrait */
 @media(max-width: 850px) {
    .section-content {
     display: flex;
@@ -217,7 +216,7 @@ h1 {
 }
 
 /* Height media queries */
-/* Iphone 14pro max*/
+/* Iphone 14pro max - potrait*/
 @media(min-height: 900px) and (max-height: 1000px) and (max-width: 450px) {
   
   h1 {
@@ -229,7 +228,7 @@ h1 {
   }
 }
 
-/* Standard phones */
+/* Standard phones  - portrait*/
 @media(min-height: 661px) and (max-height: 760px) and (max-width: 450px) {
   .orange-wheel-hero {
     left: 100px;
@@ -240,7 +239,7 @@ h1 {
 }
 
 
-/* Very short phones */ 
+/* Very short phones  - portrait*/ 
 @media(max-height: 660px) and (max-width: 450px){
   .hero-container-left span {
     font-size: 1.3rem;
@@ -262,6 +261,24 @@ h1 {
   .get-in-touch {
     font-size: 16px;
     padding: 8px;
+  }
+}
+
+/* Phones - landscape */
+@media(min-width: 480px) and (max-width:950px) and (min-height: 320px) and (max-height:450px) and (orientation: landscape){
+  .section-content {
+    height: auto !important;
+    min-height: auto !important;
+    grid-template-columns: 1fr;
+  }
+
+  .orange-wheel-hero {
+    left: 80px;
+    height: 100px;
+    width: 100px;
+}
+  .hero-container-left {
+    padding-top: 50px;
   }
 }
 

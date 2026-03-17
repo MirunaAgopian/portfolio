@@ -1,7 +1,14 @@
 const DOM = selectProjectDOM();
 let currentProjectIndex = 0;
-let privacyCheckBoxChecked = false;
 let currentLang = "en";
+
+function init() {
+  renderProject(projectsInfo[currentLang][currentProjectIndex]);
+  initHeaderObserver();
+  applyTranslations(currentLang);
+}
+
+document.addEventListener("DOMContentLoaded", init);
 
 function showAbMeOverlay(show) {
   const overlay = document.getElementById("ab_me");
@@ -108,14 +115,6 @@ function renderProject(project) {
   DOM.projectCounterDom.textContent = `${currentProjectIndex + 1}/${projectsInfo[currentLang].length}`;
 }
 
-function init() {
-  renderProject(projectsInfo[currentLang][currentProjectIndex]);
-  initHeaderObserver();
-  applyTranslations(currentLang);
-}
-
-document.addEventListener("DOMContentLoaded", init);
-
 function showNextProject() {
   currentProjectIndex++;
   if (currentProjectIndex >= projectsInfo[currentLang].length) {
@@ -134,6 +133,8 @@ function showPreviousProject() {
 
 document.getElementById("prev_proj_btn").addEventListener("click", ()=> showPreviousProject());
 document.getElementById("next_proj_btn").addEventListener("click", ()=> showNextProject());
+
+
 
 //creates smooth scroll behaviour to hero for the bouncing arrow
 //in contact section
@@ -164,123 +165,6 @@ document.querySelectorAll(".side-dots a").forEach(link => {
   });
 });
 
-
-// Functions for input in contact form
-
-function handleBlurName() {
-  const nameField = document.getElementById("name");
-  const nameInputValue = nameField.value.trim();
-
-  if (nameInputValue === "" || nameInputValue.length < 3) {
-    nameField.classList.add("error");
-    nameField.placeholder = domInfo[currentLang].contactFormNameError;
-  } else {
-    nameField.classList.remove("error");
-    nameField.placeholder = "";
-  }
-  updateSubmitButtonState();
-}
-
-function handleBlurEmail() {
-  const emailField = document.getElementById("email");
-
-  if (!emailField.checkValidity()) {
-    emailField.classList.add("error");
-    emailField.placeholder = domInfo[currentLang].contactFormMailError;
-  } else {
-    emailField.classList.remove("error");
-    emailField.placeholder = "";
-  }
-
-  updateSubmitButtonState();
-}
-
-function handleBlurTextarea() {
-  const textarea = document.getElementById("message");
-  const textareaValue = textarea.value.trim();
-
-  if ((textareaValue === "") | (textareaValue.length < 5)) {
-    textarea.classList.add("error");
-    textarea.placeholder = domInfo[currentLang].contactFormTextareaError;
-  } else {
-    textarea.classList.remove("error");
-    textarea.placeholder = "";
-  }
-  updateSubmitButtonState();
-}
-
-function handleCheckbox() {
-  const checkbox = document.getElementById("checkbox");
-  privacyCheckBoxChecked = true;
-
-  checkbox.classList.toggle("checked");
-  updatePrivacyErrorText();
-  updateSubmitButtonState();
-}
-
-function updatePrivacyErrorText() {
-  const checkbox = document.getElementById("checkbox");
-  const errorMsg = document.getElementById("error_msg_container");
-
-  if (!privacyCheckBoxChecked) {
-    errorMsg.textContent = "";
-    return;
-  }
-
-  if (checkbox.classList.contains("checked")) {
-    errorMsg.textContent = "";
-  } else {
-    errorMsg.textContent = domInfo[currentLang].contactPrivacyPolicyError;
-  }
-}
-
-function updateSubmitButtonState() {
-  const nameField = document.getElementById("name");
-  const emailField = document.getElementById("email");
-  const textarea = document.getElementById("message");
-  const checkbox = document.getElementById("checkbox");
-  const submitBtn = document.getElementById("submit_msg");
-
-  const nameValue = nameField.value.trim();
-  const emailValue = emailField.value.trim();
-  const messageValue = textarea.value.trim();
-
-  const nameValid =
-    nameValue.length >= 3 && !nameField.classList.contains("error");
-
-  const emailValid =
-    emailValue.length > 0 && !emailField.classList.contains("error");
-
-  const messageValid =
-    messageValue.length >= 5 && !textarea.classList.contains("error");
-
-  const checkboxChecked = checkbox.classList.contains("checked");
-
-  if (nameValid && emailValid && messageValid && checkboxChecked) {
-    submitBtn.disabled = false;
-  } else {
-    submitBtn.disabled = true;
-  }
-}
-
-document.getElementById("name").addEventListener("blur", handleBlurName);
-document.getElementById("email").addEventListener("blur", handleBlurEmail);
-document.getElementById("message").addEventListener("blur", handleBlurTextarea);
-document.getElementById("checkbox").addEventListener("click", handleCheckbox);
-
-//live input validation, that enabled the submit message button
-document.addEventListener("DOMContentLoaded", () => {
-  const nameField = document.getElementById("name");
-  const emailField = document.getElementById("email");
-  const textarea = document.getElementById("message");
-
-  nameField.addEventListener("input", handleBlurName);
-  emailField.addEventListener("input", handleBlurEmail);
-  textarea.addEventListener("input", handleBlurTextarea);
-});
-
-//I need to disable false e-mail validation at chrome autofill!!
-//I also need to empty fields when msj was submitted
 
 //Header functions
 function setHeader(section) {
@@ -354,30 +238,4 @@ function initHeaderObserver() {
     },
   );
   sections.forEach((section) => observer.observe(section));
-}
-
-// Functions for translating the DOM texts
-
-document.getElementById("lang_btn").addEventListener("click", () => {
-  currentLang = currentLang === "en" ? "de" : "en";
-  document.getElementById("lang_btn").textContent = currentLang.toUpperCase();
-
-  renderProject(projectsInfo[currentLang][currentProjectIndex]);
-  applyTranslations(currentLang);
-
-  updatePrivacyErrorText();
-});
-
-function applyTranslations(lang) {
-  // 1. Normal text
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    el.textContent = domInfo[lang][key];
-  });
-
-  // 2. Placeholders
-  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-placeholder");
-    el.setAttribute("placeholder", domInfo[lang][key]);
-  });
 }

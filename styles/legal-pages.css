@@ -72,4 +72,8 @@ span {
   .main-content {
     padding: 0 16px;
   }
+
+  .text-container {
+    padding-top: 60px;
+  }
 }

@@ -421,6 +421,13 @@ span {
     }
 }
 
+/* Phones - landscape */
+@media(min-width: 480px) and (max-width:950px) and (min-height: 250px) and (max-height:450px) and (orientation: landscape){
+   .projects-section-content {
+    padding: 50px 16px;
+   }
+}
+
 /* Large tablets - portrait */
 @media (min-width: 835px) and (max-width: 1024px)
   and (min-height: 1181px) and (max-height: 1366px)

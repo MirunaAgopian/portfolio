@@ -18,8 +18,9 @@
     <!-- Scripts -->
     <script src="./script.js" defer></script>
     <script src="./scripts/db.js" defer></script>
+    <script src="./scripts/navigation.js" defer></script>
   </head>
-  <body onload="init()">
+  <body>
     <header>
       <nav>
         <ul class="social-media">
@@ -359,8 +360,6 @@
                   class="emoji-img"
                   src="./assets/img/secret_info _emojis.png"
                   alt="a smiley face keeping the pointer finger to the mouth"
-                  onmouseenter="showAbMeOverlay(true)"
-                  onmouseleave="showAbMeOverlay(false)"
                 />
               </div>
               <div id="ab_me" class="ab-me-overlay d-none">
@@ -492,7 +491,6 @@
                   class="orange-wheel"
                   src="./assets/img/orange_wheel.png"
                   alt="an orange wheel"
-                  onmouseenter="showSkillsOverlay(true)"
                 />
                 <img
                   class="hat"
@@ -505,7 +503,6 @@
                       class="overlay-close-btn"
                       src="./assets/img/close_btn.png"
                       alt="close button"
-                      onclick="showSkillsOverlay(false)"
                     />
                   </button>
                   <p data-i18n="competenciesOverlayUpper">
@@ -675,8 +672,6 @@
                         class="project-icon"
                         src=""
                         alt="project icon"
-                        onmouseenter="showProjectsOverlay(true)"
-                        onmouseleave="showProjectsOverlay(false)"
                       />
                       <div id="projects_overlay" class="overlay d-none">
                         <p id="project_overlay_description"></p>
@@ -721,16 +716,13 @@
                   </div>
                 </div>
                 <div class="lower-btns">
-                  <span
-                    onclick="showPreviousProject()"
-                    data-i18n="myWorkBtnPrev"
-                  >
+                  <span id="prev_proj_btn" data-i18n="myWorkBtnPrev">
                     &lt;&lt; Previous project</span
                   >
                   <div class="counter">
                     <p></p>
                   </div>
-                  <span onclick="showNextProject()" data-i18n="myWorkBtnNext">
+                  <span id="next_proj_btn" data-i18n="myWorkBtnNext">
                     Next project &gt;&gt;</span
                   >
                 </div>
@@ -746,10 +738,7 @@
               </li>
               <li>
                 <a href="#about">
-                  <img
-                    src="./assets/img/black_dot.png"
-                    alt="navigation dots"
-                  />
+                  <img src="./assets/img/black_dot.png" alt="navigation dots" />
                 </a>
               </li>
               <li>
@@ -759,7 +748,10 @@
               </li>
               <li>
                 <a href="#projects">
-                  <img src="./assets/img/diamond_nav_btn_orange.png" alt="navigation dots" />
+                  <img
+                    src="./assets/img/diamond_nav_btn_orange.png"
+                    alt="navigation dots"
+                  />
                 </a>
               </li>
               <li>
@@ -851,10 +843,7 @@
             <ul class="side-dots">
               <li>
                 <a href="#hero">
-                  <img
-                    src="./assets/img/white_dot.png"
-                    alt="navigation dots"
-                  />
+                  <img src="./assets/img/white_dot.png" alt="navigation dots" />
                 </a>
               </li>
               <li>
@@ -874,7 +863,10 @@
               </li>
               <li>
                 <a href="#feedback">
-                  <img src="./assets/img/diamond_nav_btn_orange.png" alt="navigation dots" />
+                  <img
+                    src="./assets/img/diamond_nav_btn_orange.png"
+                    alt="navigation dots"
+                  />
                 </a>
               </li>
               <li>
@@ -1032,10 +1024,7 @@
             <ul class="side-dots">
               <li>
                 <a href="#hero">
-                  <img
-                    src="./assets/img/white_dot.png"
-                    alt="navigation dots"
-                  />
+                  <img src="./assets/img/white_dot.png" alt="navigation dots" />
                 </a>
               </li>
               <li>
@@ -1060,7 +1049,10 @@
               </li>
               <li>
                 <a href="#contact">
-                  <img src="./assets/img/diamond_nav_btn_orange.png" alt="navigation dots" />
+                  <img
+                    src="./assets/img/diamond_nav_btn_orange.png"
+                    alt="navigation dots"
+                  />
                 </a>
               </li>
             </ul>

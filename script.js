@@ -26,6 +26,9 @@ function showAbMeOverlay(show) {
   }
 }
 
+document.querySelector(".emoji-img").addEventListener("mouseenter", ()=> showAbMeOverlay(true));
+document.querySelector(".emoji-img").addEventListener("mouseleave", ()=> showAbMeOverlay(false));
+
 function showSkillsOverlay(show) {
   const overlay = document.getElementById("overlay_skills");
   if (show) {
@@ -49,6 +52,9 @@ function showSkillsOverlay(show) {
   }
 }
 
+document.querySelector(".overlay-close-btn").addEventListener("click", () => showSkillsOverlay(false));
+document.querySelector(".orange-wheel").addEventListener("mouseenter", () => showSkillsOverlay(true));
+
 function showProjectsOverlay(show) {
   const overlay = document.getElementById("projects_overlay");
   if (show) {
@@ -57,6 +63,9 @@ function showProjectsOverlay(show) {
     overlay.classList.add("d-none");
   }
 }
+
+document.getElementById("project_icon").addEventListener("mouseenter", ()=> showProjectsOverlay(true));
+document.getElementById("project_icon").addEventListener( 'mouseleave', ()=> showProjectsOverlay(false));
 
 function selectProjectDOM() {
   return {
@@ -105,6 +114,8 @@ function init() {
   applyTranslations(currentLang);
 }
 
+document.addEventListener("DOMContentLoaded", init);
+
 function showNextProject() {
   currentProjectIndex++;
   if (currentProjectIndex >= projectsInfo[currentLang].length) {
@@ -120,6 +131,9 @@ function showPreviousProject() {
   }
   renderProject(projectsInfo[currentLang][currentProjectIndex]);
 }
+
+document.getElementById("prev_proj_btn").addEventListener("click", ()=> showPreviousProject());
+document.getElementById("next_proj_btn").addEventListener("click", ()=> showNextProject());
 
 //creates smooth scroll behaviour to hero for the bouncing arrow
 //in contact section
@@ -296,7 +310,8 @@ function setHeader(section) {
 
 function hideHeaderOnMobile(theme) {
   const header = document.querySelector("header");
-  if (window.innerWidth <= 850) {
+  const isMobile = window.innerWidth <= 850;
+  if (isMobile) {
     if (theme === "hero") {
       header.classList.remove("d-none");
     } else {
@@ -306,6 +321,7 @@ function hideHeaderOnMobile(theme) {
   }
   header.classList.remove("d-none");
 }
+
 
 //checks the current section to update the header visibility
 function getCurrentSection() {
@@ -322,11 +338,6 @@ function getCurrentSection() {
   return null;
 }
 
-window.addEventListener("resize", () => {
-  const current = getCurrentSection();
-  if (current) setHeader(current);
-});
-
 function initHeaderObserver() {
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(
@@ -338,44 +349,12 @@ function initHeaderObserver() {
       });
     },
     {
-      threshold: 0.5,
+      threshold: 0.3,
+      rootMargin: "-20% 0px -20% 0px",
     },
   );
   sections.forEach((section) => observer.observe(section));
 }
-
-//Mobile nav and burger menu functions
-function toggleMobileNav(isOpen) {
-  const nav = document.getElementById("mobie_nav");
-  if (isOpen) {
-    nav.classList.add("visible");
-  } else {
-    nav.classList.remove("visible");
-  }
-}
-
-document.getElementById("burger_menu").addEventListener("click", (event) => {
-  event.stopPropagation();
-  toggleMobileNav(true);
-});
-
-document
-  .getElementById("close_mobile_menu_btn")
-  .addEventListener("click", () => toggleMobileNav(false));
-
-document.addEventListener("click", (event) => {
-  const nav = document.getElementById("mobie_nav");
-  if (!nav.classList.contains("visible")) return;
-  if (nav.contains(event.target)) return;
-  toggleMobileNav(false);
-});
-
-const navLinks = document.querySelectorAll(".menu-options a");
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    toggleMobileNav(false);
-  });
-});
 
 // Functions for translating the DOM texts
 

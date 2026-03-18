@@ -113,5 +113,30 @@ document.addEventListener("DOMContentLoaded", () => {
   textarea.addEventListener("input", handleBlurTextarea);
 });
 
+
+//Send e-mail
+async function sendContactMessage() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const response = await fetch("../contact_form_mail.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, message })
+  });
+
+  return response.json();
+}
+
+document.getElementById("submit_msg").addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  const result = await sendContactMessage();
+  console.log(result);
+});
+
+
+
 //I need to disable false e-mail validation at chrome autofill!!
 //I also need to empty fields when msj was submitted

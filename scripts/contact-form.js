@@ -43,7 +43,8 @@ function handleBlurTextarea() {
   updateSubmitButtonState();
 }
 
-function handleCheckbox() {
+function handleCheckbox(e) {
+  e.stopPropagation();
   const checkbox = document.getElementById("checkbox");
   privacyCheckBoxChecked = true;
 
@@ -129,14 +130,29 @@ async function sendContactMessage() {
   return response.json();
 }
 
-document.getElementById("submit_msg").addEventListener("click", async (e) => {
+document.getElementById("contact_form").addEventListener("submit", async (e) => {
+  console.log("GLOBAL SUBMIT EVENT:", e.target);
   e.preventDefault();
-
   const result = await sendContactMessage();
-  console.log(result);
+  if(result.success) {
+    console.log("RESULT:", result, typeof result.success);
+    clearForm()
+  } else {
+    console.error(result.error);
+  }
 });
 
+function clearForm() {
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const textarea = document.getElementById("message");
+  const checkbox = document.getElementById("checkbox");
+
+  nameField.value = "";
+  emailField.value = "";
+  textarea.value =  "";
+  checkbox.classList.remove('checked');
+  console.log("CLEAR FORM RUNNING");
+}
 
 
-//I need to disable false e-mail validation at chrome autofill!!
-//I also need to empty fields when msj was submitted

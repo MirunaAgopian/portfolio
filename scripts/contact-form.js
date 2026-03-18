@@ -120,7 +120,7 @@ async function sendContactMessage() {
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  const response = await fetch("../contact_form_mail.php", {
+  const response = await fetch("/portfolio/contact_form_mail.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, message })

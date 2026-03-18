@@ -1,6 +1,5 @@
 const DOM = selectProjectDOM();
 let currentProjectIndex = 0;
-let currentLang = "en";
 
 function init() {
   renderProject(projectsInfo[currentLang][currentProjectIndex]);

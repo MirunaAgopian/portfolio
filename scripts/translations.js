@@ -1,12 +1,18 @@
 // Functions for translating the DOM texts
+let currentLang = "en";
+
 document.getElementById("lang_btn").addEventListener("click", () => {
   currentLang = currentLang === "en" ? "de" : "en";
   document.getElementById("lang_btn").textContent = currentLang.toUpperCase();
 
-  renderProject(projectsInfo[currentLang][currentProjectIndex]);
+  // Only run this if the function exists (index.html)
+  if (typeof renderProject === "function") {
+    renderProject(projectsInfo[currentLang][currentProjectIndex]);
+  }
   applyTranslations(currentLang);
-
-  updatePrivacyErrorText();
+  if(typeof updatePrivacyErrorText === "function") {
+    updatePrivacyErrorText();
+  }
 });
 
 function applyTranslations(lang) {

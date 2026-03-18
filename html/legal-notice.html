@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/legal-pages.css" />
-    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/contact.css" />
     <!-- Scripts -->
     <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/db.js" defer></script>
+    <script src="../scripts/translations.js" defer></script>
   </head>
   <body>
     <header>
@@ -112,7 +114,7 @@
         </a>
         <ul class="lang-nav">
           <li>
-              <button class="language-btn">EN</button>
+            <button id="lang_btn" class="language-btn">EN</button>
           </li>
           <li>
             <button id="burger_menu" class="menu-btn" aria-label="Open menu">
@@ -249,21 +251,35 @@
     <main class="legals-main">
       <section class="main-content">
         <section class="text-container">
-          <h1>Legal notice</h1>
-          <h2>Imprint</h2>
-          <p>The data from this page belongs to <span>Miruna Agopian</span>.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A accusamus facilis enim ipsa necessitatibus dicta, eius iste. Voluptatem laudantium atque doloribus voluptatibus sint architecto quam aperiam sunt, quis accusamus recusandae!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ab accusantium minus quas, voluptatibus vitae reiciendis, amet deleniti, veritatis animi architecto. Doloribus quibusdam reprehenderit quidem, incidunt numquam id impedit quas?</p>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet voluptatum quibusdam omnis. Laborum ipsum repellendus temporibus porro. Dolor, ipsum, vel rem officia rerum expedita magni doloremque fugiat eos neque tenetur?</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit suscipit voluptatibus dolorum accusamus, cupiditate, amet modi ipsam non sint voluptatum assumenda nihil vel iure. Exercitationem, veritatis recusandae. Unde, nesciunt ad.</p>
-          <h2>Another header</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae pariatur, illum officiis error tenetur quis at dolor. Dicta qui, voluptates nemo accusamus blanditiis deserunt vel maxime asperiores recusandae veniam rerum!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
+          <h1 data-i18n="legalNoticeHeader">Legal notice</h1>
+          <h2 data-i18n="legalNoticeSubheaderFirst">
+            Information according to § 5 DDG (Digital Services Act Germany):
+          </h2>
+          <div class="contact-info">
+            <span>Miruna-Alexandra Agopian</span>.
+            <p>Auf dem Sand 41 A, 68309 Mannheim, Deutschland</p>
+            <p>info@miruna-agopian.de</p>
+            <p>+49 176 763 111 35</p>
+          </div>
+          <h2 data-i18n="legalNoticeSubheaderSecond">Responsible for content according to § 18(2) MStV:</h2>
+          <span>Miruna-Alexandra Agopian</span>
+          <h2 data-i18n="legalNoticeSubheaderThird">Contact:</h2>
+          <p>Email: info@miruna-agopian.de</p>
+          <h2 data-i18n="legalNoticeSubheaderFourth">Liability for Content</h2>
+          <p data-i18n="legalNoticeParagaphOne">
+            As a service provider, I am responsible for my own content on these
+            pages in accordance with § 7(1) DDG. However, I am not obligated to
+            monitor transmitted or stored external information (§§ 8–10 DDG). If
+            I become aware of any legal violations, such content will be removed
+            immediately.
+          </p>
+          <h2 data-i18n="legalNoticeSubheaderFifth">Liability for External Links</h2>
+          <p data-i18n="legalNoticeParagaphTwo">
+            This website may contain links to external third‑party websites. I
+            have no influence on their content and therefore cannot assume any
+            liability for them. If I become aware of legal violations, such
+            links will be removed immediately.
+          </p>
         </section>
         <div class="lower-container">
           <div class="images-wrapper">

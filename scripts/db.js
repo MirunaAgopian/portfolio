@@ -133,6 +133,74 @@ const domInfo = {
     contactBtn: "Drop a line",
 
     footerLink: "Legal notice",
+
+    legalNoticeHeader: "Legal notice",
+    legalNoticeSubheaderFirst:
+      "Information according to § 5 DDG (Digital Services Act Germany):",
+    legalNoticeSubheaderSecond:
+      "Responsible for content according to § 18(2) MStV:",
+    legalNoticeSubheaderThird: "Contact:",
+    legalNoticeSubheaderFourth: "Liability for Content",
+    legalNoticeSubheaderFifth: "Liability for External Links",
+    legalNoticeParagaphOne:
+      "As a service provider, I am responsible for my own content on these pages in accordance with § 7(1) DDG. However, I am not obligated to monitor transmitted or stored external information (§§ 8–10 DDG). If I become aware of any legal violations, such content will be removed immediately.",
+    legalNoticeParagaphTwo:
+      "This website may contain links to external third‑party websites. I have no influence on their content and therefore cannot assume any liability for them. If I become aware of legal violations, such links will be removed immediately.",
+
+    privPolicyHeader: "Privacy policy",
+    privPolicySubheaderFirst: "1. Controller",
+    privPolicySubheaderSecond: "2. Access Data / Server Log Files",
+    privPolicySubheaderThird: "3. Contact Form",
+    privPolicySubheaderFourth: "4. Disclosure of Data",
+    privPolicySubheaderFifth: "5. SSL Encryption",
+    privPolicySubheaderSixth: "6. Cookies and Tracking",
+    privPolicySubheaderSeventh: "7. Rights of Data Subjects",
+    privPolicySubheaderEigth: "8. Withdrawal of Consent",
+    privPolicySubheaderNinth: "9. Changes to This Privacy Policy",
+    dataDisclosure: "The data from this page belongs to Miruna-Alexandra Agopian",
+    dataOwner: "Miruna-Alexandra Agopian",
+
+    privPolicyParagraphOne:
+      "When you visit this website, technical data is automatically collected by the hosting provider. This includes:",
+    privPolicyLiOne: "IP address",
+    privPolicyLiTwo: "Date and time of access",
+    privPolicyLiThree: "Visited page",
+    privPolicyLiFour: "Browser type and version",
+    privPolicyLiFive: "Operating system",
+    privPolicyParagraphTwo:
+      "These data are processed to ensure the technical operation and security of the website. The legal basis is Art. 6(1)(f) GDPR (legitimate interest).",
+
+    privPolicyParagraphThree:
+      "If you contact me via the contact form, the following data will be processed:",
+    privPolicyLiSix: "Name",
+    privPolicyLiSeven: "Email address",
+    privPolicyLiEight: "Message content",
+    privPolicyLiNine: "IP address",
+    privPolicyParagraphFour: "Purpose of processing:",
+    privPolicyParagraphFive: "To respond to your inquiry.",
+    privPolicyParagraphSix: "Storage period:",
+    privPolicyParagraphSeven:
+      "Your data will be deleted once your request has been fully processed, unless legal retention obligations apply.",
+    privPolicyParagraphEight:
+      "Your data will not be shared with third parties. Exception: The hosting provider processes data as part of a data processing agreement.",
+    privPolicyParagraphNine:
+      "This website uses SSL encryption. This ensures that data you transmit cannot be read by third parties.",
+    privPolicyParagraphTen:
+      "This website uses no cookies, no analytics tools, and no tracking technologies.",
+    privPolicyParagraphEleven: "Under the GDPR, you have the following rights:",
+
+    privPolicyLiTen: "Right of access",
+    privPolicyLiEleven: "Right to rectification",
+    privPolicyLiTwelve: "Right to erasure",
+    privPolicyLiThirteen: "Right to restriction of processing",
+    privPolicyLiFourteen: "Right to withdraw consent",
+    privPolicyLiFifteen: "Right to data portability",
+    privPolicyLiSixteen:
+      "Right to lodge a complaint with a supervisory authority",
+    privPolicyParagraphTwelve:
+      "You may withdraw your consent at any time by sending an email. The withdrawal does not affect the lawfulness of processing carried out before the withdrawal.",
+    privPolicyParagraphThirteen:
+      "I may update this privacy policy to reflect legal requirements or changes to the website.",
   },
 
   de: {
@@ -211,5 +279,72 @@ const domInfo = {
     contactBtn: "Nachricht senden",
 
     footerLink: "Impressum",
+
+    legalNoticeHeader: "Impressum",
+    legalNoticeSubheaderFirst:
+      "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):",
+    legalNoticeSubheaderSecond:
+      "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:",
+    legalNoticeSubheaderThird: "Kontakt:",
+    legalNoticeSubheaderFourth: "Haftung für den Inhalt",
+    legalNoticeSubheaderFifth: "Haftung für externe Links",
+    legalNoticeParagaphOne:
+      "Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht jedoch nicht (§§ 8–10 DDG). Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Inhalte umgehend entfernt.",
+    legalNoticeParagaphTwo:
+      "Diese Webseite kann Links zu externen Webseiten Dritter enthalten. Auf deren Inhalte habe ich keinen Einfluss und kann daher keine Gewähr übernehmen. Bei Bekanntwerden von Rechtsverletzungen werden solche Links umgehend entfernt.",
+
+    privPolicyHeader: "Datenschutzerklärung",
+    privPolicySubheaderFirst: "1. Verantwortliche Stelle",
+    privPolicySubheaderSecond: "2. Zugriffsdaten / Server-Logfiles",
+    privPolicySubheaderThird: "3. Kontaktformular",
+    privPolicySubheaderFourth: "4. Weitergabe von Daten",
+    privPolicySubheaderFifth: "5. SSL-Verschlüsselung",
+    privPolicySubheaderSixth: "6. Cookies und Tracking",
+    privPolicySubheaderSeventh: "7. Rechte der betroffenen Personen",
+    privPolicySubheaderEighth: "8. Widerruf der Einwilligung",
+    privPolicySubheaderNineth: "9. Änderungen dieser Datenschutzerklärung",
+    dataDisclosure: "Die Daten dieser Seite gehören Miruna-Alexandra Agopian.",
+    dataOwner: "Miruna-Alexandra Agopian.",
+
+    privPolicyParagraphOne:
+      "Beim Besuch dieser Webseite werden automatisch technische Daten vom Hosting-Anbieter erfasst. Dazu gehören:",
+    privPolicyLiOne: "IP-Adresse",
+    privPolicyLiTwo: "Datum und Uhrzeit des Zugriffs",
+    privPolicyLiThree: "Aufgerufene Seite",
+    privPolicyLiFour: "Browsertyp und -version",
+    privPolicyLiFive: "Betriebssystem",
+    privPolicyParagraphTwo:
+      "Diese Daten werden verarbeitet, um den technischen Betrieb und die Sicherheit der Webseite zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).",
+
+    privPolicyParagraphThree:
+      "Wenn Sie mich über das Kontaktformular kontaktieren, werden folgende Daten verarbeitet:",
+    privPolicyLiSix: "Name",
+    privPolicyLiSeven: "E-Mail-Adresse",
+    privPolicyLiEight: "Nachrichteninhalt",
+    privPolicyLiNine: "IP-Adresse",
+    privPolicyParagraphFour: "Zweck der Verarbeitung:",
+    privPolicyParagraphFive: "Beantwortung Ihrer Anfrage.",
+    privPolicyParagraphSix: "Speicherdauer:",
+    privPolicyParagraphSeven:
+      "Ihre Daten werden gelöscht, sobald Ihre Anfrage vollständig bearbeitet wurde, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+    privPolicyParagraphEight:
+      "Ihre Daten werden nicht an Dritte weitergegeben. Ausnahme: Der Hosting-Anbieter verarbeitet Daten im Rahmen eines Auftragsverarbeitungsvertrags.",
+    privPolicyParagraphNine:
+      "Diese Webseite nutzt eine SSL-Verschlüsselung. Dadurch können übermittelte Daten nicht von Dritten mitgelesen werden.",
+    privPolicyParagraphTen:
+      "Diese Webseite verwendet keine Cookies, keine Analyse-Tools und keine Tracking-Technologien.",
+    privPolicyParagraphEleven: "Nach der DSGVO hast du folgende Rechte:",
+
+    privPolicyLiTen: "Recht auf Auskunft",
+    privPolicyLiEleven: "Recht auf Berichtigung",
+    privPolicyLiTwelve: "Recht auf Löschung",
+    privPolicyLiThirteen: "Recht auf Einschränkung der Verarbeitung",
+    privPolicyLiFourteen: "Recht auf Widerruf der Einwilligung",
+    privPolicyLiFifteen: "Recht auf Datenübertragbarkeit",
+    privPolicyLiSixteen: "Recht auf Beschwerde bei einer Aufsichtsbehörde",
+    privPolicyParagraphTwelve:
+      "Sie können Ihre Einwilligung jederzeit per E-Mail widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der Verarbeitung bis zum Zeitpunkt des Widerrufs.",
+    privPolicyParagraphThirteen:
+      "Ich kann diese Datenschutzerklärung anpassen, um gesetzlichen Anforderungen oder Änderungen der Webseite gerecht zu werden.",
   },
 };

@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/legal-pages.css" />
-    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/contact.css" />
     <!-- Scripts -->
     <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/db.js" defer></script>
+    <script src="../scripts/translations.js" defer></script>
   </head>
   <body>
     <header>
@@ -112,7 +114,7 @@
         </a>
         <ul class="lang-nav">
           <li>
-              <button class="language-btn">EN</button>
+            <button id="lang_btn" class="language-btn">EN</button>
           </li>
           <li>
             <button id="burger_menu" class="menu-btn" aria-label="Open menu">
@@ -249,21 +251,90 @@
     <main class="legals-main">
       <section class="main-content">
         <section class="text-container">
-          <h1>Privacy policy</h1>
-          <h2>Imprint</h2>
-          <p>The data from this page belongs to <span>Miruna Agopian</span>.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A accusamus facilis enim ipsa necessitatibus dicta, eius iste. Voluptatem laudantium atque doloribus voluptatibus sint architecto quam aperiam sunt, quis accusamus recusandae!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ab accusantium minus quas, voluptatibus vitae reiciendis, amet deleniti, veritatis animi architecto. Doloribus quibusdam reprehenderit quidem, incidunt numquam id impedit quas?</p>
-          <h2>Header</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet voluptatum quibusdam omnis. Laborum ipsum repellendus temporibus porro. Dolor, ipsum, vel rem officia rerum expedita magni doloremque fugiat eos neque tenetur?</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit suscipit voluptatibus dolorum accusamus, cupiditate, amet modi ipsam non sint voluptatum assumenda nihil vel iure. Exercitationem, veritatis recusandae. Unde, nesciunt ad.</p>
-          <h2>Another header</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae pariatur, illum officiis error tenetur quis at dolor. Dicta qui, voluptates nemo accusamus blanditiis deserunt vel maxime asperiores recusandae veniam rerum!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto, cupiditate hic optio ratione eaque eos, alias facilis voluptatibus nulla, quam temporibus aperiam minima accusamus nihil ipsa culpa iure recusandae?</p>
+          <h1 data-i18n="privPolicyHeader">Privacy policy</h1>
+          <h2 data-i18n="privPolicySubheaderFirst">1. Controller</h2>
+          <div class="contact-info">
+            <p data-i18n="dataDisclosure">
+              The data from this page belongs to
+              <span data-i18n="dataOwner">Miruna-Alexandra Agopian</span>.
+            </p>
+            <p>Auf dem Sand 41 A, 68309 Mannheim, Deutschland</p>
+            <p>info@miruna-agopian.de</p>
+            <p>+49 176 763 111 35</p>
+          </div>
+          <h2 data-i18n="privPolicySubheaderSecond">2. Access Data / Server Log Files</h2>
+          <p data-i18n="privPolicyParagraphOne">
+            When you visit this website, technical data is automatically
+            collected by the hosting provider. This includes:
+          </p>
+          <ul class="lists-legal-pages">
+            <li data-i18n="privPolicyLiOne">IP address</li>
+            <li data-i18n="privPolicyLiTwo">Date and time of access</li>
+            <li data-i18n="privPolicyLiThree">Visited page</li>
+            <li data-i18n="privPolicyLiFour">Browser type and version</li>
+            <li data-i18n="privPolicyLiFive">Operating system</li>
+          </ul>
+          <p data-i18n="privPolicyParagraphTwo">
+            These data are processed to ensure the technical operation and
+            security of the website. The legal basis is Art. 6(1)(f) GDPR
+            (legitimate interest).
+          </p>
+          <h2 data-i18n="privPolicySubheaderThird">3. Contact Form</h2>
+          <p data-i18n="privPolicyParagraphThree">
+            If you contact me via the contact form, the following data will be
+            processed:
+          </p>
+          <ul class="lists-legal-pages">
+            <li data-i18n="privPolicyLiSix">Name</li>
+            <li data-i18n="privPolicyLiSeven">Email address</li>
+            <li data-i18n="privPolicyLiEight">Message content</li>
+            <li data-i18n="privPolicyLiNine">IP address</li>
+          </ul>
+          <p class="strong" data-i18n="privPolicyParagraphFour">Purpose of processing:</p>
+          <p data-i18n="privPolicyParagraphFive">To respond to your inquiry.</p>
+          <p class="strong" data-i18n="privPolicyParagraphSix">Storage period:</p>
+          <p data-i18n="privPolicyParagraphSeven">
+            Your data will be deleted once your request has been fully
+            processed, unless legal retention obligations apply.
+          </p>
+          <h2 data-i18n="privPolicySubheaderFourth">4. Disclosure of Data</h2>
+          <p data-i18n="privPolicyParagraphEight">
+            Your data will not be shared with third parties. Exception: The
+            hosting provider processes data as part of a data processing
+            agreement.
+          </p>
+          <h2 data-i18n="privPolicySubheaderFifth">5. SSL Encryption</h2>
+          <p data-i18n="privPolicyParagraphNine">
+            This website uses SSL encryption. This ensures that data you
+            transmit cannot be read by third parties.
+          </p>
+          <h2 data-i18n="privPolicySubheaderSixth">6. Cookies and Tracking</h2>
+          <p data-i18n="privPolicyParagraphTen">
+            This website uses no cookies, no analytics tools, and no tracking
+            technologies.
+          </p>
+          <h2 data-i18n="privPolicySubheaderSeventh">7. Rights of Data Subjects</h2>
+          <p data-i18n="privPolicyParagraphEleven">Under the GDPR, you have the following rights:</p>
+          <ul class="lists-legal-pages">
+            <li data-i18n="privPolicyLiTen">Right of access</li>
+            <li data-i18n="privPolicyLiEleven">Right to rectification</li>
+            <li data-i18n="privPolicyLiTwelve">Right to erasure</li>
+            <li data-i18n="privPolicyLiThirteen">Right to restriction of processing</li>
+            <li data-i18n="privPolicyLiFourteen">Right to withdraw consent</li>
+            <li data-i18n="privPolicyLiFifteen">Right to data portability</li>
+            <li data-i18n="privPolicyLiSixteen">Right to lodge a complaint with a supervisory authority</li>
+          </ul>
+          <h2 data-i18n="privPolicySubheaderEigth">8. Withdrawal of Consent</h2>
+          <p data-i18n="privPolicyParagraphTwelve">
+            You may withdraw your consent at any time by sending an email. The
+            withdrawal does not affect the lawfulness of processing carried out
+            before the withdrawal.
+          </p>
+          <h2 data-i18n="privPolicySubheaderNinth">9. Changes to This Privacy Policy</h2>
+          <p data-i18n="privPolicyParagraphThirteen">
+            I may update this privacy policy to reflect legal requirements or
+            changes to the website.
+          </p>
         </section>
         <div class="lower-container">
           <div class="images-wrapper">

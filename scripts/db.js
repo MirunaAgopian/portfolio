@@ -24,7 +24,7 @@ let projectsInfo = {
       projectBlackBoxDescription:
         "A collaborative Kanban board application built as a team project. It allows users to create tasks, assign them to contacts, prioritize them, and move them across categories using drag‑and‑drop.",
       projectGitHubLink: "https://github.com/MirunaAgopian/JOIN-2",
-      projectLink: "",
+      projectLink: "https://miruna-agopian.de/JOIN-2/html/login.html",
     },
     {
       projectImage: "assets/img/epl2.png",
@@ -37,7 +37,7 @@ let projectsInfo = {
       projectBlackBoxDescription:
         "A 2D jump‑and‑run game built with JavaScript and object‑oriented programming, inspired by classic platformers. Guide the character through the world, collect coins and bottles, and face the final enemy.",
       projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
-      projectLink: "",
+      projectLink: "https://miruna-agopian.de/el_pollo_loco/",
     },
   ],
 
@@ -53,7 +53,7 @@ let projectsInfo = {
       projectBlackBoxDescription:
         "Eine kollaborative Kanban‑Board‑Anwendung, die als Teamprojekt entstanden ist. Nutzer können Aufgaben erstellen, Kontakten zuweisen, priorisieren und per Drag‑and‑Drop zwischen Kategorien verschieben.",
       projectGitHubLink: "https://github.com/MirunaAgopian/JOIN-2",
-      projectLink: "",
+      projectLink: "https://miruna-agopian.de/JOIN-2/html/login.html",
     },
     {
       projectImage: "assets/img/epl2.png",
@@ -66,7 +66,7 @@ let projectsInfo = {
       projectBlackBoxDescription:
         "Ein 2D‑Jump‑and‑Run‑Spiel mit JavaScript und objektorientierter Programmierung, inspiriert von klassischen Plattformern. Führe die Figur durch die Welt, sammle Münzen und Flaschen und stelle dich dem Endgegner.",
       projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
-      projectLink: "",
+      projectLink: "https://miruna-agopian.de/el_pollo_loco/",
     },
   ],
 };

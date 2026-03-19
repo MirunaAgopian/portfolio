@@ -129,6 +129,7 @@ const domInfo = {
     contactPrivacyPolicyLinkText: "privacy policy",
     contactPrivacyPolicyTextAfter: "and agree to the processing of my data.",
     contactPrivacyPolicyError: "Please agree to the privacy policy.",
+    contactPrivacyPolicySuccess: "Message sent successfully!",
 
     contactBtn: "Drop a line",
 
@@ -275,6 +276,7 @@ const domInfo = {
     contactPrivacyPolicyTextAfter:
       "gelesen und stimme der Verarbeitung meiner Daten zu.",
     contactPrivacyPolicyError: "Bitte stimme der Datenschutzerklärung zu.",
+    contactPrivacyPolicySuccess: "Nachricht erfolgreich zugestellt!",
 
     contactBtn: "Nachricht senden",
 

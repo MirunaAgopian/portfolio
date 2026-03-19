@@ -281,6 +281,14 @@ textarea::-webkit-scrollbar-thumb {
   font-weight: var(--fw-normal);
 }
 
+.success-message {
+  height: 20px;
+  width: 90%;
+  color: green;
+  padding: 8px;
+  font-weight: var(--fw-normal);
+}
+
 .privacy-span {
   color: var(--color-txt-primary);
   font-weight: var(--fw-normal);

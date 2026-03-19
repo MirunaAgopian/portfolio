@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
   textarea.addEventListener("input", handleBlurTextarea);
 });
 
-
 //Send e-mail
 async function sendContactMessage() {
   const name = document.getElementById("name").value;
@@ -124,35 +123,65 @@ async function sendContactMessage() {
   const response = await fetch("/portfolio/contact_form_mail.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, message })
+    body: JSON.stringify({ name, email, message }),
   });
 
   return response.json();
 }
 
-document.getElementById("contact_form").addEventListener("submit", async (e) => {
-  console.log("GLOBAL SUBMIT EVENT:", e.target);
-  e.preventDefault();
-  const result = await sendContactMessage();
-  if(result.success) {
-    console.log("RESULT:", result, typeof result.success);
-    clearForm()
-  } else {
-    console.error(result.error);
-  }
-});
+document
+  .getElementById("contact_form")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const result = await sendContactMessage();
+    if (result.success) {
+      clearForm();
+    } else {
+      console.error(result.error);
+    }
+  });
 
 function clearForm() {
+  emptyInputs();
+  restorePlaceholders();
+  handleCheckBoxAndBtn();
+  showSentMessage();
+}
+
+function emptyInputs() {
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
   const textarea = document.getElementById("message");
-  const checkbox = document.getElementById("checkbox");
-
   nameField.value = "";
   emailField.value = "";
-  textarea.value =  "";
-  checkbox.classList.remove('checked');
-  console.log("CLEAR FORM RUNNING");
+  textarea.value = "";
 }
 
+function restorePlaceholders() {
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const textarea = document.getElementById("message");
+  nameField.placeholder = domInfo[currentLang].contactFormNamePlaceholder;
+  emailField.placeholder = domInfo[currentLang].contactFormMailPlaceholder;
+  textarea.placeholder = domInfo[currentLang].contactFormTextareaPlaceholder;
+}
 
+function handleCheckBoxAndBtn() {
+  const checkbox = document.getElementById("checkbox");
+  const submitBtn = document.getElementById("submit_msg");
+  checkbox.classList.remove("checked");
+  submitBtn.disabled = true;
+}
+
+function showSentMessage() {
+  const msgBox = document.getElementById("error_msg_container");
+  msgBox.textContent = domInfo[currentLang].contactPrivacyPolicySuccess;
+  msgBox.classList.add("success-message");
+
+  setTimeout(() => {
+    msgBox.textContent = "";
+    msgBox.classList.remove("success-message");
+  }, 2000);
+}
+
+//!! disablke that chrome warnings at autofill

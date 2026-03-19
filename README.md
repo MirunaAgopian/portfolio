@@ -1,4 +1,4 @@
-# Personal Portfolio – Miruna
+# Personal Portfolio – Miruna Agopian
 
 Welcome to my portfolio website, where I showcase my main frontend projects.
 
@@ -38,6 +38,7 @@ This project uses HTML, CSS, JS and PHP.
 ---
 
 ## Project Structure
+```bash
 Portfolio
 │
 ├── assets
@@ -70,6 +71,7 @@ Portfolio
 ├── LICENSE
 ├── script.js
 └── style.css
+```
 
 ## License
 

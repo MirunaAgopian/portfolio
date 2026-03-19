@@ -1,20 +1,34 @@
-// Functions for translating the DOM texts
+/**
+ * Stores the currently active language for DOM translations.
+ * Used by the language toggle button and translation functions.
+ * @type {string}
+ */
 let currentLang = "en";
 
+/**
+ * Toggles the current language between English and German,
+ * updates the language button label, re-renders the project section
+ * (if available), applies all DOM translations, and updates the
+ * privacy error text when the function exists.
+ * @event click
+ */
 document.getElementById("lang_btn").addEventListener("click", () => {
   currentLang = currentLang === "en" ? "de" : "en";
   document.getElementById("lang_btn").textContent = currentLang.toUpperCase();
-
-  // Only run this if the function exists (index.html)
   if (typeof renderProject === "function") {
     renderProject(projectsInfo[currentLang][currentProjectIndex]);
   }
   applyTranslations(currentLang);
-  if(typeof updatePrivacyErrorText === "function") {
+  if (typeof updatePrivacyErrorText === "function") {
     updatePrivacyErrorText();
   }
 });
 
+/**
+ * Applies translated text to all DOM elements marked with translation attributes.
+ * Updates both normal text nodes and placeholder attributes based on the selected language.
+ * @param {string} lang - The language code to apply ("en" or "de").
+ */
 function applyTranslations(lang) {
   // 1. Normal text
   document.querySelectorAll("[data-i18n]").forEach((el) => {

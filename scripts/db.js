@@ -1,3 +1,16 @@
+/**
+ * @typedef {Object} Project
+ * @property {string} projectImage - Path to the project's main image.
+ * @property {string} projectAlt - Accessible alt text for the project image.
+ * @property {string} projectTitle - Display title of the project.
+ * @property {string} projectIcon - Path to the small icon used in the UI.
+ * @property {string} projectOverlayDescription - Long description shown in the overlay.
+ * @property {string[]} projectTechnologies - List of technologies used.
+ * @property {string} projectBlackBoxDescription - Short description shown in the black box.
+ * @property {string} projectGitHubLink - URL to the GitHub repository.
+ * @property {string} projectLink - URL to the live project (optional).
+ * @type {{ en: TranslationMap, de: TranslationMap }}
+ */
 let projectsInfo = {
   en: [
     {
@@ -57,6 +70,14 @@ let projectsInfo = {
     },
   ],
 };
+
+/**
+ * @typedef {Object.<string, string>} TranslationMap
+ * A dictionary of UI text strings used for DOM translation.
+ * Keys correspond to data-i18n identifiers in the HTML,
+ * and values contain the translated text for the selected language.
+ * @type {{ en: TranslationMap, de: TranslationMap }}
+ */
 
 const domInfo = {
   en: {
@@ -158,7 +179,8 @@ const domInfo = {
     privPolicySubheaderSeventh: "7. Rights of Data Subjects",
     privPolicySubheaderEigth: "8. Withdrawal of Consent",
     privPolicySubheaderNinth: "9. Changes to This Privacy Policy",
-    dataDisclosure: "The data from this page belongs to Miruna-Alexandra Agopian",
+    dataDisclosure:
+      "The data from this page belongs to Miruna-Alexandra Agopian",
     dataOwner: "Miruna-Alexandra Agopian",
 
     privPolicyParagraphOne:

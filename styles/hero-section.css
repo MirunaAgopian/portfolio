@@ -213,6 +213,11 @@ h1 {
   .hero-container-left span {
     font-size: 1.5rem;
   }
+
+  
+  .orange-wheel-hero {
+    left: 130px;
+  }
 }
 
 /* Height media queries */

@@ -279,6 +279,7 @@ textarea::-webkit-scrollbar-thumb {
   color: #c56969;
   padding: 8px;
   font-weight: var(--fw-normal);
+  margin-bottom: 30px;
 }
 
 .success-message {
@@ -287,6 +288,7 @@ textarea::-webkit-scrollbar-thumb {
   color: green;
   padding: 8px;
   font-weight: var(--fw-normal);
+  margin-bottom: 30px;
 }
 
 .privacy-span {
@@ -494,6 +496,10 @@ footer {
 
   .upper-form {
     flex-direction: column;
+  }
+
+  .lower-container {
+    padding-top: 80px;
   }
 
   .checkbox-and-text {

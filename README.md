@@ -4,7 +4,7 @@ Welcome to my portfolio website, where I showcase my main frontend projects.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Asymmetric CSS layout**  
   The design uses asymmetric layout patterns, having animated overlays for additional context.

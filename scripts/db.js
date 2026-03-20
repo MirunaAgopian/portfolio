@@ -140,7 +140,7 @@ const domInfo = {
 
     contactFormMail: "What's your email?",
     contactFormMailPlaceholder: "youremail@email.com",
-    contactFormMailError: "Is you email correct?",
+    contactFormMailError: "Is your email correct?",
 
     contactFormTextarea: "How can I help you?",
     contactFormTextareaPlaceholder: "Hello Miruna, I am interested in...",

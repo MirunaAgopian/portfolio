@@ -256,6 +256,22 @@ document.querySelector(".go-up-link a").addEventListener("click", function (e) {
 });
 
 /**
+ * Smoothly scrolls to the contact section when the buttons are clicked.
+ * @event click
+ */
+document.querySelectorAll(".smooth-scroll").forEach(btn => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const contact = document.querySelector("#contact");
+    const scroller = document.querySelector("main");
+    scroller.scrollTo({
+      top: contact.offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
+
+/**
  * Smoothly scrolls to the target section when a side‑dot link is clicked.
  * @event click
  */

@@ -328,9 +328,9 @@ span {
 
 @media(max-width: 550px) {
   .overlay {
-    max-width: 220px;
+    max-width: 240px;
     min-height: 200px;
-    height: 250px;
+    height: 300px;
     top: -240px;
     right: -8px;
     z-index: 20;

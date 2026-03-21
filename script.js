@@ -23,26 +23,6 @@ const DOM = selectProjectDOM();
 let currentProjectIndex = 0;
 
 /**
- * Initializes the webflow:
- * - renders the first project
- * - sets up the header observer
- * - applies translations (default: English)
- *
- * @returns {void}
- */
-function init() {
-  renderProject(projectsInfo[currentLang][currentProjectIndex]);
-  initHeaderObserver();
-  applyTranslations(currentLang);
-}
-
-/**
- * Initializes the app once the DOM is fully loaded.
- * @event DOMContentLoaded
- */
-document.addEventListener("DOMContentLoaded", init);
-
-/**
  * Shows the project description overlay when the user hovers over the project icon.
  * @event mouseenter
  */

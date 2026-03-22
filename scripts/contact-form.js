@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   emailField.addEventListener("input", handleBlurEmail);
   emailField.addEventListener("blur", handleBlurEmail);
-  emailField.addEventListener("change", handleBlurEmail);
 
   textarea.addEventListener("input", handleBlurTextarea);
   textarea.addEventListener("blur", handleBlurTextarea);

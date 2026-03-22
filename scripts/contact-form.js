@@ -13,12 +13,15 @@ let privacyCheckBoxChecked = false;
 function handleBlurName() {
   const nameField = document.getElementById("name");
   const nameInputValue = nameField.value.trim();
+  const errorContainer = document.getElementById("error_msg_container");
   if (nameInputValue === "" || nameInputValue.length < 3) {
     nameField.classList.add("error");
     nameField.placeholder = domInfo[currentLang].contactFormNameError;
+    errorContainer.textContent = domInfo[currentLang].contactFormNameErrorBox;
   } else {
     nameField.classList.remove("error");
     nameField.placeholder = "";
+    errorContainer.textContent = "";
   }
   updateSubmitButtonState();
 }
@@ -29,12 +32,15 @@ function handleBlurName() {
  */
 function handleBlurEmail() {
   const emailField = document.getElementById("email");
+  const errorContainer = document.getElementById("error_msg_container");
   if (!emailField.checkValidity()) {
     emailField.classList.add("error");
     emailField.placeholder = domInfo[currentLang].contactFormMailError;
+    errorContainer.textContent = domInfo[currentLang].contactFormMailError;
   } else {
     emailField.classList.remove("error");
     emailField.placeholder = "";
+    errorContainer.textContent = "";
   }
   updateSubmitButtonState();
 }
@@ -45,13 +51,16 @@ function handleBlurEmail() {
  */
 function handleBlurTextarea() {
   const textarea = document.getElementById("message");
+  const errorContainer = document.getElementById("error_msg_container");
   const textareaValue = textarea.value.trim();
   if ((textareaValue === "") | (textareaValue.length < 5)) {
     textarea.classList.add("error");
     textarea.placeholder = domInfo[currentLang].contactFormTextareaError;
+    errorContainer.textContent = domInfo[currentLang].contactFormTextareaErrorBox;
   } else {
     textarea.classList.remove("error");
     textarea.placeholder = "";
+    errorContainer.textContent = "";
   }
   updateSubmitButtonState();
 }
@@ -115,32 +124,9 @@ function updateSubmitButtonState() {
   }
 }
 
-/**
- * Triggers name‑field error handling when the field loses focus.
- * @event blur
- */
-document.getElementById("name").addEventListener("blur", handleBlurName);
 
 /**
- * Triggers email‑field error handling when the field loses focus.
- * @event blur
- */
-document.getElementById("email").addEventListener("blur", handleBlurEmail);
-
-/**
- * Triggers textarea error handling when the field loses focus.
- * @event blur
- */
-document.getElementById("message").addEventListener("blur", handleBlurTextarea);
-
-/**
- * Toggles the privacy checkbox state and updates related UI feedback.
- * @event click
- */
-document.getElementById("checkbox").addEventListener("click", handleCheckbox);
-
-/**
- * Adds live input validation for all contact‑form fields
+ * Adds live input validation for all contact‑form fields and the checkbox
  * once the DOM is fully loaded.
  * @event DOMContentLoaded
  */
@@ -148,10 +134,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
   const textarea = document.getElementById("message");
+   const checkbox = document.getElementById("checkbox");
 
   nameField.addEventListener("input", handleBlurName);
+  nameField.addEventListener("blur", handleBlurName);
+
   emailField.addEventListener("input", handleBlurEmail);
+  emailField.addEventListener("blur", handleBlurEmail);
+  emailField.addEventListener("change", handleBlurEmail);
+
   textarea.addEventListener("input", handleBlurTextarea);
+  textarea.addEventListener("blur", handleBlurTextarea);
+
+  checkbox.addEventListener("click", handleCheckbox);
 });
 
 /**

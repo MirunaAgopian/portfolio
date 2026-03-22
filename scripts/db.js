@@ -137,6 +137,7 @@ const domInfo = {
     contactFormName: "What's your name?",
     contactFormNamePlaceholder: "Your name goes here",
     contactFormNameError: "Please enter your name.",
+    contactFormNameErrorBox: "Is your name that short?",
 
     contactFormMail: "What's your email?",
     contactFormMailPlaceholder: "youremail@email.com",
@@ -145,6 +146,7 @@ const domInfo = {
     contactFormTextarea: "How can I help you?",
     contactFormTextareaPlaceholder: "Hello Miruna, I am interested in...",
     contactFormTextareaError: "Please enter your message.",
+    contactFormTextareaErrorBox: "Is your message that short?",
 
     contactPrivacyPolicyTextBefore: "I've read the",
     contactPrivacyPolicyLinkText: "privacy policy",
@@ -283,6 +285,7 @@ const domInfo = {
     contactFormName: "Wie heißt du?",
     contactFormNamePlaceholder: "Hier kommt dein Name",
     contactFormNameError: "Ups! Dein Name fehlt.",
+    contactFormNameErrorBox: "Is dein Name so kurz?",
 
     contactFormMail: "Deine E‑Mail?",
     contactFormMailPlaceholder: "deine@email.de",
@@ -292,6 +295,7 @@ const domInfo = {
     contactFormTextareaPlaceholder:
       "Hallo Miruna, ich interessiere mich für...",
     contactFormTextareaError: "Bitte gib deine Nachricht ein.",
+    contactFormTextareaErrorBox: "Ist deine Nanchicht so kurz?",
 
     contactPrivacyPolicyTextBefore: "Ich habe die",
     contactPrivacyPolicyLinkText: "Datenschutzerklärung",

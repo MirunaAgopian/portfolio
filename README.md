@@ -2,6 +2,9 @@
 
 Welcome to my portfolio website, where I showcase my main frontend projects.
 
+<div align="center">
+  <img src="assets/img/portfolio_project_img.png" width="600" />
+</div>
 ---
 
 ## Features

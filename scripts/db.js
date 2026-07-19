@@ -14,13 +14,26 @@
 let projectsInfo = {
   en: [
     {
+      projectImage: "assets/img/poll_app.png",
+      projectAlt: "Image of the angular project, PollApp",
+      projectTitle: "PollApp",
+      projectIcon: "assets/img/poll_app_project_icon.png",
+      projectOverlayDescription:
+        "PollApp strengthened my Angular fundamentals through building a modular survey system with real‑time voting. I worked with Supabase for structured storage, CRUD operations, and live updates, while creating reusable components and clean UI utilities. The project was fun and deepened my understanding of scalable architecture and gave me confidence in building interactive, data‑driven frontend features.",
+      projectTechnologies: ["Angular, TS |", "SCSS |", "Supabase"],
+      projectBlackBoxDescription:
+        "A real‑time survey application built with Angular. It allows users to create surveys with multiple questions, vote instantly, and see live results powered by Supabase. The modular architecture includes reusable components, dynamic rendering, and structured data handling for fast, interactive user experiences.",
+      projectGitHubLink: "https://github.com/MirunaAgopian/PollApp",
+      projectLink: "https://miruna-agopian.de/poll_app/",
+    },
+    {
       projectImage: "assets/img/join.png",
       projectAlt: "Image of the kanbanboard project, JOIN",
       projectTitle: "Join",
       projectIcon: "assets/img/join_project_icon.png",
       projectOverlayDescription:
         "JOIN gave me practical experience with advanced CSS and DOM manipulation, and interactive UI behavior. The project features data handling with Firebase, including dynamic rendering, structured storage, real‑time updates, and form validation. The project pushed my skills and showed me how to build solid, data‑driven frontend features with confidence.",
-      projectTechnologies: ["HTML |", "CSS |", "JS |", "Firebase"],
+      projectTechnologies: ["HTML, CSS, JS |", "N8N |", "Firebase"],
       projectBlackBoxDescription:
         "A collaborative Kanban board application built as a team project. It allows users to create tasks, assign them to contacts, prioritize them, and move them across categories using drag‑and‑drop.",
       projectGitHubLink: "https://github.com/MirunaAgopian/JOIN-2",
@@ -43,13 +56,26 @@ let projectsInfo = {
 
   de: [
     {
+      projectImage: "assets/img/poll_app.png",
+      projectAlt: "Image of the angular project, PollApp",
+      projectTitle: "PollApp",
+      projectIcon: "assets/img/poll_app_project_icon.png",
+      projectOverlayDescription:
+        "PollApp stärkte meine Angular‑Grundlagen durch den Aufbau eines modularen Umfragesystems mit Echtzeit‑Voting. Ich arbeitete mit Supabase für strukturierte Speicherung, CRUD‑Operationen und Live‑Updates und entwickelte wiederverwendbare Komponenten sowie UI‑Utilities. Das Projekt vertiefte mein Verständnis für skalierbare Architektur und gab mir Sicherheit beim Entwickeln interaktiver, datengetriebener Frontend‑Features.",
+      projectTechnologies: ["Angular, TS |", "SCSS |", "Supabase"],
+      projectBlackBoxDescription:
+        "Eine Echtzeit‑Umfrageanwendung, entwickelt mit Angular. Nutzer können Umfragen mit mehreren Fragen erstellen, sofort abstimmen und dank Supabase Live‑Ergebnisse sehen. Die modulare Architektur umfasst wiederverwendbare Komponenten, dynamisches Rendering und strukturierte Datenverarbeitung für schnelle, interaktive Nutzererlebnisse.",
+      projectGitHubLink: "https://github.com/MirunaAgopian/PollApp",
+      projectLink: "https://miruna-agopian.de/poll_app/",
+    },
+    {
       projectImage: "assets/img/join.png",
       projectAlt: "Bild des Kanban‑Board‑Projekts JOIN",
       projectTitle: "Join",
       projectIcon: "assets/img/join_project_icon.png",
       projectOverlayDescription:
         "JOIN hat mir praktische Erfahrung mit fortgeschrittenem CSS, DOM‑Manipulation und interaktiven UI‑Verhalten gegeben. Das Projekt verfügt über eine Firebase‑basierte Datenverarbeitung mit dynamischem Rendering, strukturierter Speicherung, Echtzeit‑Updates und Formularvalidierung. Das Projekt hat meine Fähigkeiten erweitert und mir gezeigt, wie man solide, datengetriebene Frontend‑Features mit Sicherheit entwickelt.",
-      projectTechnologies: ["HTML |", "CSS |", "JS |", "Firebase"],
+      projectTechnologies: ["HTML, CSS, JS |", "N8N |", "Firebase"],
       projectBlackBoxDescription:
         "Eine kollaborative Kanban‑Board‑Anwendung, die als Teamprojekt entstanden ist. Nutzer können Aufgaben erstellen, Kontakten zuweisen, priorisieren und per Drag‑and‑Drop zwischen Kategorien verschieben.",
       projectGitHubLink: "https://github.com/MirunaAgopian/JOIN-2",
@@ -106,7 +132,7 @@ const domInfo = {
     abMeLiFifth: "Based in Mannheim",
     abMeLiSixth: "German, English & Romanian speaker",
 
-    competencieadHeader: "Core Competencies",
+    competencieadHeader: "Core competencies",
     competenciesDescription:
       "I develop clean, maintainable frontend applications using HTML, CSS, JavaScript, Angular, and TypeScript. I work confidently with asynchronous programming and OOP principles, and I enjoy building interfaces that are both intuitive and visually consistent. I value clarity, simplicity, and structure — in code, UI, and documentation. I'm also experienced with Scrum, Firebase, and collaborative team workflows.",
     competenciesOverlayUpper: "Don't you find the skill you need?",

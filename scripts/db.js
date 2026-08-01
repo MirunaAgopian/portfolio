@@ -52,6 +52,19 @@ let projectsInfo = {
       projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
       projectLink: "https://miruna-agopian.de/el_pollo_loco/",
     },
+    {
+      projectImage: "assets/img/dabubble_project_img.png",
+      projectAlt: "Image of the real-time messaging app, DABubble",
+      projectTitle: "DABubble - in progress",
+      projectIcon: "assets/img/dabubble_project_icon.png",
+      projectOverlayDescription:
+        "DABubble is a real business application that I’m currently developing with Angular and AngularFire. I enjoy working on its clean UI, real-time features, and the technical challenges that come with building a scalable messaging system.",
+      projectTechnologies: ["Angular |", "TS |", "AngularFire"],
+      projectBlackBoxDescription:
+        "A real-time messaging application inspired by Slack. Users can authenticate with Google or create a custom profile, start private conversations, and organize discussions into channels and threads.",
+      projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
+      projectLink: "https://miruna-agopian.de/el_pollo_loco/",
+    },
   ],
 
   de: [
@@ -91,6 +104,19 @@ let projectsInfo = {
       projectTechnologies: ["HTML |", "CSS |", "JS - OOP"],
       projectBlackBoxDescription:
         "Ein 2D‑Jump‑and‑Run‑Spiel mit JavaScript und objektorientierter Programmierung, inspiriert von klassischen Plattformern. Führe die Figur durch die Welt, sammle Münzen und Flaschen und stelle dich dem Endgegner.",
+      projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
+      projectLink: "https://miruna-agopian.de/el_pollo_loco/",
+    },
+    {
+      projectImage: "assets/img/dabubble_project_img.png",
+      projectAlt: "Image of the real-time messaging app, DABubble",
+      projectTitle: "DABubble - in progress",
+      projectIcon: "assets/img/dabubble_project_icon.png",
+      projectOverlayDescription:
+        "DABubble ist eine echte Business‑App, die ich derzeit mit Angular und AngularFire entwickle. Besonders Freude macht mir die Arbeit an der klaren UI, den Echtzeit‑Funktionen und den technischen Herausforderungen, die beim Aufbau eines skalierbaren Messaging‑Systems entstehen.",
+      projectTechnologies: ["Angular |", "TS |", "AngularFire"],
+      projectBlackBoxDescription:
+        "Eine Echtzeit‑Messaging‑App, inspiriert von Slack. Nutzer können sich über Google authentifizieren oder ein eigenes Profil erstellen, private Gespräche starten und Diskussionen in Kanälen und Threads organisieren.",
       projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
       projectLink: "https://miruna-agopian.de/el_pollo_loco/",
     },
@@ -137,7 +163,7 @@ const domInfo = {
       "I develop clean, maintainable frontend applications using HTML, CSS, JavaScript, Angular, and TypeScript. I work confidently with asynchronous programming and OOP principles, and I enjoy building interfaces that are both intuitive and visually consistent. I value clarity, simplicity, and structure — in code, UI, and documentation. I'm also experienced with Scrum, Firebase, and collaborative team workflows.",
     competenciesOverlayUpper: "Don't you find the skill you need?",
     competenciesOverlayLower:
-      "I'm currently expanding my knowledge. I have a special interest in learning:",
+      "I will expand my knowledge. I have a special interest in learning:",
 
     myWorkHeader: "My work",
     myWorkSubheader:
@@ -285,7 +311,7 @@ const domInfo = {
       "Ich entwickle saubere, wartbare Frontend‑Anwendungen mit HTML, CSS, JavaScript, Angular und TypeScript. Ich arbeite sicher mit asynchroner Programmierung und OOP‑Prinzipien und baue Oberflächen, die intuitiv und visuell konsistent sind. Klarheit, Einfachheit und Struktur sind mir wichtig – im Code, im UI und in der Dokumentation. Außerdem habe ich Erfahrung mit Scrum, Firebase und kollaborativen Team‑Workflows.",
     competenciesOverlayUpper: "Fehlt dir eine bestimmte Fähigkeit?",
     competenciesOverlayLower:
-      "Ich erweitere aktuell mein Wissen. Besonders interessieren mich folgende Themen:",
+      "Ich werde mein Wissen erweitern. Besonders interessieren mich folgende Themen:",
 
     myWorkHeader: "Meine Projekte",
     myWorkSubheader:

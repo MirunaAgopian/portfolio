@@ -62,8 +62,8 @@ let projectsInfo = {
       projectTechnologies: ["Angular |", "TS |", "AngularFire"],
       projectBlackBoxDescription:
         "A real-time messaging application inspired by Slack. Users can authenticate with Google or create a custom profile, start private conversations, and organize discussions into channels and threads.",
-      projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
-      projectLink: "https://miruna-agopian.de/el_pollo_loco/",
+      projectGitHubLink: "https://github.com/MirunaAgopian/DABubble",
+      projectLink: "",
     },
   ],
 
@@ -117,8 +117,8 @@ let projectsInfo = {
       projectTechnologies: ["Angular |", "TS |", "AngularFire"],
       projectBlackBoxDescription:
         "Eine Echtzeit‑Messaging‑App, inspiriert von Slack. Nutzer können sich über Google authentifizieren oder ein eigenes Profil erstellen, private Gespräche starten und Diskussionen in Kanälen und Threads organisieren.",
-      projectGitHubLink: "https://github.com/MirunaAgopian/El-pollo-locco",
-      projectLink: "https://miruna-agopian.de/el_pollo_loco/",
+      projectGitHubLink: "https://github.com/MirunaAgopian/DABubble",
+      projectLink: "",
     },
   ],
 };
